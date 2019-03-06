@@ -1,0 +1,37 @@
+<div>
+    <h2>页脚</h2>
+    <div>
+        <text>copyright:</text><text>{$footer.title}</text><br/>
+        <text>email:</text><text>{$footer.email}</text><br/>
+        <text>备案号:</text><text>{$footer.record}</text><br/>
+        <text>地址:</text><text>{$footer.address}</text><br/>
+        <text>telephone1:</text><text>{$footer.telephone}</text><br/>
+        <text>telephone2:</text><text>{$footer.telephone2}</text><br/>
+    </div>
+</div>
+
+<script type="text/javascript" >
+    var map = new AMap.Map('container', {
+        zoom:15,//级别
+        center: [116.59706,39.917001],//中心点坐标
+        viewMode:'3D'//使用3D视图
+    });
+    var infoWindow = new AMap.InfoWindow({ //创建信息窗体
+        isCustom: true,  //使用自定义窗体
+        content:'<div>建材检测中心</div>', //信息窗体的内容可以是任意html片段
+        offset: new AMap.Pixel(16, -45)
+    });
+    var onMarkerClick  =  function(e) {
+        infoWindow.open(map, e.target.getPosition());//打开信息窗体
+        //e.target就是被点击的Marker
+    }
+    var marker = new AMap.Marker({
+        position: [116.59706,39.917001]
+    })
+    map.add(marker);
+    marker.on('click',onMarkerClick);//绑定click事件
+</script>
+
+</body>
+</html>
+

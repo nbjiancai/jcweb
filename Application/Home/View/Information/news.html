@@ -1,0 +1,13 @@
+<include file="Common:head" title="前台导航栏"/>
+<a name="notice">通知公告</a></br>
+<volist name="notice" id="vo">
+    <a href="{:U('/home/Information/newDetail')}?type=1&id={$vo['id']}">{$vo.title}</a></br>
+</volist>
+<nav>{$pagination1}</nav>
+<a name="industry">行业新闻</a></br>
+<volist name="industry" id="vo">
+    <a href="{:U('/home/Information/newDetail')}?type=1&id={$vo['id']}">{$vo.title}</a></br>
+</volist>
+<nav>{$pagination2}</nav>
+<include file="Common:footer"/>
+

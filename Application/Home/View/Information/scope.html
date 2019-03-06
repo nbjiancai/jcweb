@@ -1,0 +1,7 @@
+<include file="Common:head" title="前台导航栏"/>
+<a name="notice">检测范围</a></br>
+<volist name="scope" id="vo">
+    <a href="{:U('/home/Information/scopeDetail')}?id={$vo['id']}">{$vo.title}</a></br>
+</volist>
+<nav>{$pagination}</nav>
+<include file="Common:footer"/>

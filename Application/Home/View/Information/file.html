@@ -1,0 +1,12 @@
+<include file="Common:head" title="前台导航栏"/>
+<a name="">资料下载</a></br>
+<volist name="data" id="vo">
+    <a href="{$vo['save_path']}" download="{$vo['filename']}">{$vo.filename}</a></br>
+</volist>
+<nav>{$pagination1}</nav>
+<a name="standard">标准下载</a></br>
+<volist name="standard" id="vo">
+    <a href="{$vo['save_path']}" download="{$vo['filename']}">{$vo.filename}</a></br>
+</volist>
+<nav>{$pagination2}</nav>
+<include file="Common:footer"/>

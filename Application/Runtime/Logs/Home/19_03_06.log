@@ -1,0 +1,199 @@
+[ 2019-03-06T08:11:02+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+
+[ 2019-03-06T08:17:21+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001661s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0032s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021812s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001321s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001444s ]
+
+[ 2019-03-06T08:17:21+08:00 ] 127.0.0.1 /Public/picture/lab_image/20130301082708_76145.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000823s ]
+
+[ 2019-03-06T08:17:21+08:00 ] 127.0.0.1 /Public/picture/lab_image/1549161903(1).jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+
+[ 2019-03-06T08:17:21+08:00 ] 127.0.0.1 /Public/picture/lab_image/1549161859(1).jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000812s ]
+
+[ 2019-03-06T08:17:22+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+
+[ 2019-03-06T08:34:30+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001851s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002066s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0011s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027303s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002710s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003075s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003397s ]
+
+[ 2019-03-06T08:34:30+08:00 ] 127.0.0.1 /Public/picture/lab_image/20130301082708_76145.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+
+[ 2019-03-06T08:34:30+08:00 ] 127.0.0.1 /Public/picture/lab_image/1549161903(1).jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001301s ]
+
+[ 2019-03-06T08:34:30+08:00 ] 127.0.0.1 /Public/picture/lab_image/1549161859(1).jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+
+[ 2019-03-06T08:42:36+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001277s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000275s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000675s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038604s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038970s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002378s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002738s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003268s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003664s ]
+
+[ 2019-03-06T08:42:36+08:00 ] 127.0.0.1 /Public/picture/lab_image/20130301082708_76145.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000086s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001703s ]
+
+[ 2019-03-06T08:42:36+08:00 ] 127.0.0.1 /Public/picture/lab_image/1549161903(1).jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001160s ]
+
+[ 2019-03-06T08:42:37+08:00 ] 127.0.0.1 /Public/picture/lab_image/1549161859(1).jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001147s ]
+
+[ 2019-03-06T09:11:43+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001475s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013548s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000685s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001003s ]
+
