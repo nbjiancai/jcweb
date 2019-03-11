@@ -1,7 +1,7 @@
 <include file="Common:head" title="前台导航栏"/>
 <div>
     <h2>首页图片</h2>
-    <img src="{$picture.pic_path}">
+    <img src="{$picture.picture}">
 </div>
 <div>
     <h2>中心简介</h2>
@@ -10,13 +10,13 @@
 <div>
     <h2>新闻中心</h2>
     <foreach name="news" item="for">
-        <a src="">{$for.title}</a><br/>
+        <a href="{:U('/home/Information/newDetail')}?type=1&id={$for['id']}">{$for.title}</a><br/>
     </foreach>
 </div>
 <div>
     <h2>质检服务</h2>
     <foreach name="inspection" item="ins">
-        <a url="">{$ins.title}</a>
+        <a href="{:U('/home/Information/scopeDetail')}?id={$ins['id']}">{$ins.title}</a></br>
     </foreach>
 </div>
 <div>

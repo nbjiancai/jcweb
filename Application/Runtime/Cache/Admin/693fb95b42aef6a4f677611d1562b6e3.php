@@ -284,80 +284,141 @@
         });
 </script>
     <div id="page-inner" class="container">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/main/lunbo?de=A" >首页轮播图</a></li>
+            <li role="presentation" id="de_B" name="de"><a href="/admin/main/lunbo?de=B">实验室图片</a></li>
+            <input type="hidden" id="de_choose" value="<?php echo ($de); ?>"/>
+        </ul>
         <div id="TCrop">
-        <form class="form-horizontal" id="myform" action="" method="post">
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">首页轮播照片</label>
-                <div class="col-sm-10">
-                    <input type="hidden" name="imgurl"  />
-                    <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile"   />
-                    <p class="help-block" id="attachment"></p>
+            <form class="form-horizontal" id="myform" action="" method="post">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <input type="hidden" name="imgurl"  />
+                        <input type="hidden" name="thumb_url"/>
+                        <input type="hidden" name="de" value="<?php echo ($de); ?>"/>
+                        <?php if($de == B): ?>图片名称：<input type="text" name="title"><?php endif; ?>
+                        <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile"/>
+                        <p class="help-block" id="attachment"></p>
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center">&nbsp;</label>
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-success" onclick="onSave()">保 存</button>
-                    <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
-                    <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label talign-center">&nbsp;</label>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-success" onclick="onSave()">保 存</button>
+                        <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
+                        <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
         </div>
         <div>
-            <table class="table table-bordered table-striped table-hover">
-                <thead>
-                <th width="80%">图片</th>
-                <th>操作</th>
-                </thead>
-                <tbody>
-                <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
-                        <td>
-                            <a href="javascript:void(0);" name="<?php echo ($one["picture_name"]); ?>" onclick="return Check(this);">
-                                <img src="<?php echo ($one["picture"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" class="img-responsive" style="max-width: 500px;"/>
-                            </a>
-                        </td>
-                        <td><a href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> 删除</a>
-                        </td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
-            </table>
+            <?php if($de == A): ?><table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <th width="80%">轮播图片</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+                            <td>
+                                <a href="javascript:void(0);" name="<?php echo ($one["picture"]); ?>" onclick="return Check(this);">
+                                    <img src="<?php echo ($one["picture"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" class="img-responsive" style="max-width: 500px;"/>
+                                </a>
+                            </td>
+                            <td><a href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table><?php endif; ?>
+            <?php if($de == B): ?><table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <th width="50%">实验室图片</th>
+                    <th width="30%">图片名称</th>
+                    <th>操作</th>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+                            <td>
+                                <a href="javascript:void(0);" name="<?php echo ($one["pic_path"]); ?>" onclick="return Check(this);">
+                                    <img src="<?php echo ($one["pic_path"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" class="img-responsive" style="max-width: 500px;"/>
+                                </a>
+                            </td>
+                            <td><?php echo ($one["title"]); ?></td>
+                            <td><a href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>','<?php echo ($de); ?>')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> 删除</a>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table><?php endif; ?>
         </div>
     </div>
-</div>
 </div>
 <script src="/Public/static/js/jquery.form.js"></script>
 <script src="/Public/static/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
+    $(function(){
+        var de = $("#de_choose").val();
+        $("li[name='de']").removeClass("active");
+        $("#de_"+de).addClass("active");
+    });
     function ajaxFileUpload(){
         var file = $("#addfile").val();
-        if(file){
-            $.ajaxFileUpload({
-                url: "<?php echo U('Uploader/start2');?>",
-                secureuri: false,
-                fileElementId: 'addfile',
-                dataType: 'JSON',
-                success: function (data, status) {
-                    var ret = JSON.parse(data);
-                    $("#addfile").val("");
-                    //alert(ret.url);
-                    if(ret.info=='succ'){
-                        $("input[name='imgurl']").val(ret.url);
-                        $("#attachment").html(ret.url);
-                    }else{
+        var de = $("#de_choose").val();
+        if( de=='A'){
+            if(file){
+                $.ajaxFileUpload({
+                    url: "<?php echo U('Uploader/start2');?>",
+                    secureuri: false,
+                    fileElementId: 'addfile',
+                    dataType: 'JSON',
+                    success: function (data, status) {
+                        var ret = JSON.parse(data);
+                        $("#addfile").val("");
+                        //alert(ret.url);
+                        if(ret.info=='succ'){
+                            $("input[name='imgurl']").val(ret.url);
+                            $("#attachment").html(ret.url);
+                        }else{
+                            var _options = {"text":"上传失败","flag":"error"};
+                            if(ret.info) _options.text = ret.info;
+                            doAlertDialog(_options);
+                        }
+                    },
+                    error: function (data, status, e){
                         var _options = {"text":"上传失败","flag":"error"};
-                        if(ret.info) _options.text = ret.info;
                         doAlertDialog(_options);
                     }
-                },
-                error: function (data, status, e){
-                    var _options = {"text":"上传失败","flag":"error"};
-                    doAlertDialog(_options);
-                }
-            });
+                });
+            }
+            return false;
+        }else if(de=='B'){
+            if(file){
+                $.ajaxFileUpload({
+                    url: "<?php echo U('Uploader/start5');?>",
+                    secureuri: false,
+                    fileElementId: 'addfile',
+                    dataType: 'JSON',
+                    success: function (data, status) {
+                        var ret = JSON.parse(data);
+                        $("#addfile").val("");
+                        //alert(ret.url);
+                        if(ret.info=='succ'){
+                            $("input[name='imgurl']").val(ret.url);
+                            $("input[name='thumb_url']").val(ret.thumb_url);
+                            $("#attachment").html(ret.url);
+                        }else{
+                            var _options = {"text":"上传失败","flag":"error"};
+                            if(ret.info) _options.text = ret.info;
+                            doAlertDialog(_options);
+                        }
+                    },
+                    error: function (data, status, e){
+                        var _options = {"text":"上传失败","flag":"error"};
+                        doAlertDialog(_options);
+                    }
+                });
+            }
+            return false;
         }
-        return false;
     }
     function onFileUpload() {
         $('#addfile').click();
@@ -387,17 +448,17 @@
     }
 
     //删除图片
-    function onDelete(id){
+    function onDelete(id,de){
         if(!id) return false;
-        var _options = {"flag":"error","text":"您确定要删除吗！","buttons":{"ok":{"action":function(){doneDel(id);}},"cancel":{}}};
+        var _options = {"flag":"error","text":"您确定要删除吗！","buttons":{"ok":{"action":function(){doneDel(id,de);}},"cancel":{}}};
         doConfirmDialog(_options);
     }
-    function doneDel(id){
+    function doneDel(id,de){
         if(!id) return false;
         $.ajax({
             type:"post",
             url:"<?php echo U('/admin/edit/doDelete');?>",
-            data:{"id":id},
+            data:{"id":id,"de":de},
             dataType:"json",
             success:function(ret){
                 if(ret.msg=='succ'){

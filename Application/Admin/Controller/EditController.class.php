@@ -1,6 +1,8 @@
 <?php
 namespace Admin\Controller;
 use Think\Controller;
+use Think\Image;
+
 class EditController extends Controller {
     public $user = array();
     //初始化方法
@@ -11,7 +13,7 @@ class EditController extends Controller {
         $this->assign('menu_secoud_active',strtolower(ACTION_NAME));
     }
     //首页轮播图片保存
-    public function saveImage(){
+    public function saveImage1(){
         $imgurl = I("imgurl");
         //原图地址
 
@@ -22,7 +24,7 @@ class EditController extends Controller {
         }
 
         $data = array(
-            'pic_path'=>$imgurl
+            'picture'=>$imgurl
         );
         M()->startTrans();
         if(D('home_image')->add($data)){
@@ -33,11 +35,71 @@ class EditController extends Controller {
         }
         $this->ajaxReturn($result);
     }
+    //首页轮播图片保存
+    public function saveImage(){
+        $imgurl = I("imgurl");
+        $title = I('title','');
+        //原图地址
+        $de = I("de");
+        $result = array("msg"=>"fail");
+
+        if(empty($de)){
+            $result['msg'] = "类型出错！";
+            $this->ajaxReturn($result);
+        }
+
+        if(empty($imgurl)){
+            $result['msg'] = "图片保存失败！";
+            $this->ajaxReturn($result);
+        }
+
+        if($de=='A'){
+            $data = array(
+                'picture'=>$imgurl
+            );
+            M()->startTrans();
+            if(D('home_image')->add($data)){
+                $result['msg'] = 'succ';
+                M()->commit();
+            }else{
+                M()->rollback();
+            }
+        }elseif ($de=='B'){
+            $thumb_url = I('thumb_url');
+            $title = I('title');
+            if(empty($title)){
+                $result['msg'] = '图片名称不能为空！';
+                $this->ajaxReturn($result);
+            }
+            $data = array(
+                'pic_path'=>$imgurl,
+                'title'=>$title,
+                'information_pic_path'=>$thumb_url
+            );
+            M()->startTrans();
+            if(D('lab_image')->add($data)){
+                $result['msg'] = 'succ';
+                M()->commit();
+            }else{
+                M()->rollback();
+            }
+        }
+
+        $this->ajaxReturn($result);
+    }
 //首页轮播图片删除
     public function doDelete(){
         $id =I("id",0,'intval');
+        $de = I("de");
         $rs = array("msg"=>"fail");
-        if(D("home_image")->where("id=".$id)->delete()){
+        if(empty($de)){
+            $rs['msg'] = "类型不存在！";
+            $this->ajaxReturn($rs);
+        }
+        if($de=='A' && D("home_image")->where("id=".$id)->delete()){
+            $rs['msg'] = 'succ';
+        }
+        if($de=='B' && D("lab_image")->where("id=".$id)->delete()){
             $rs['msg'] = 'succ';
         }
         $this->ajaxReturn($rs);
@@ -60,6 +122,32 @@ class EditController extends Controller {
         $pagination       = $Page->show();// 分页显示输出
         $body=array(
           'de'=>$de,
+            'list'=>$data,
+            'pagination'=>$pagination,
+        );
+        $this->assign($body);
+        $this->display();
+    }
+    //新闻中心内容
+    public function news(){
+        $de=I('de','A');
+        if($de == 'A'){
+            $type = 1;//行业新闻
+        }else if($de = 'B'){
+            $type = 0;//通知公告
+        }
+        $page = I("p",'int');
+        $pagesize = 10;
+        if($page<=0) $page = 1;
+        $offset = ( $page-1 ) * $pagesize;
+        $where="type = $type";
+        $data = D("news")->where($where)->limit("{$offset},{$pagesize}")->order('id desc')->select();
+        $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+        $Page       = new \Think\Page($count,$pagesize);
+        $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+        $pagination       = $Page->show();// 分页显示输出
+        $body=array(
+            'de'=>$de,
             'list'=>$data,
             'pagination'=>$pagination,
         );
@@ -563,7 +651,7 @@ class EditController extends Controller {
         $data = array(
             'type'=>$type,
             'thumb_path'=>$img,
-            'pic_path'=>$picture,
+            'picture_path'=>$picture,
             'sortby'=>$sortby,
             'save_time'=>date("Y-m-d H:i:s"),
         );

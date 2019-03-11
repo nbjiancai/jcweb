@@ -78,36 +78,11 @@
 </header>
 
 
+<h2><?php echo ($one["title"]); ?></h2>
 <div>
-    <h2>首页图片</h2>
-    <img src="<?php echo ($picture["picture"]); ?>">
+    <p><?php echo ($one["content"]); ?></p>
 </div>
-<div>
-    <h2>中心简介</h2>
-    <p><?php echo ($intro["content"]); ?></p>
-</div>
-<div>
-    <h2>新闻中心</h2>
-    <?php if(is_array($news)): foreach($news as $key=>$for): ?><a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($for['id']); ?>"><?php echo ($for["title"]); ?></a><br/><?php endforeach; endif; ?>
-</div>
-<div>
-    <h2>质检服务</h2>
-    <?php if(is_array($inspection)): foreach($inspection as $key=>$ins): ?><a href="<?php echo U('/home/Information/scopeDetail');?>?id=<?php echo ($ins['id']); ?>"><?php echo ($ins["title"]); ?></a></br><?php endforeach; endif; ?>
-</div>
-<div>
-    <h2>联系我们</h2>
-    <div>
-        <text>postal_code:</text><text><?php echo ($contact["postal_code"]); ?></text><br/>
-        <text>address:</text><text><?php echo ($contact["address"]); ?></text><br/>
-        <text>phone_number:</text><text><?php echo ($contact["phonenumber"]); ?></text><br/>
-        <text>consult_phone:</text><text><?php echo ($contact["consult_phone"]); ?></text><br/>
-        <text>email:</text><text><?php echo ($contact["email"]); ?></text><br/>
-    </div>
-</div>
-<div>
-    <h2>实验室风采</h2>
-    <?php if(is_array($lab_picture)): foreach($lab_picture as $key=>$vo): ?><img src=<?php echo ($vo["pic_path"]); ?>><?php endforeach; endif; ?>
-</div>
+
 <div>
     <h2>页脚</h2>
     <div>
