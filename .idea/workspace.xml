@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95cbbb66-7238-4b9e-bcd3-26c27debaf95" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Application/Admin/View/Edit/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/EditController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Admin/Controller/EditController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/UploaderController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Admin/Controller/UploaderController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Edit/informationPicture.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Admin/View/Edit/informationPicture.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/877ce4dad3ee629a1b8cc410dc708fb2.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/877ce4dad3ee629a1b8cc410dc708fb2.php" afterDir="false" />
-    </list>
+    <list default="true" id="95cbbb66-7238-4b9e-bcd3-26c27debaf95" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,8 +56,8 @@
       <file leaf-file-name="news.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Edit/news.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="133">
+              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -257,12 +250,12 @@
       <workItem from="1551869119738" duration="50709000" />
       <workItem from="1552095875069" duration="5745000" />
       <workItem from="1552267710353" duration="1154000" />
-      <workItem from="1552285735674" duration="17214000" />
+      <workItem from="1552285735674" duration="17811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74822000" />
+    <option name="totallyTimeSpent" value="75419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -634,8 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Edit/news.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="133">
+          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
         </state>
       </provider>
     </entry>
