@@ -44,7 +44,8 @@ class UploaderController extends Controller {
             $imgUrl = $this->cropImage($picAddr,960,540);
             $array = array(
                 'info'=>'succ',
-                'url'=>substr($imgUrl, 1),
+                'information_pic_path'=>substr($imgUrl, 1),
+                'pic_path'=>substr($picAddr, 1),
             );
             if($return){
                 return $array;

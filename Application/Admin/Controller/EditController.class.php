@@ -130,25 +130,43 @@ class EditController extends Controller {
     }
     //新闻中心内容
     public function news(){
+        $admin_auth = session("admin_auth");//获取当前登录用户信息
+        $if_admin = $admin_auth['super_admin'];//是否是超级管理员
+        $user=$admin_auth['gid'];//判断是哪个角色
         $de=I('de','A');
+
         if($de == 'A'){
             $type = 1;//行业新闻
         }else if($de = 'B'){
             $type = 0;//通知公告
         }
-        $page = I("p",'int');
-        $pagesize = 10;
-        if($page<=0) $page = 1;
-        $offset = ( $page-1 ) * $pagesize;
-        $where="type = $type";
-        $data = D("news")->where($where)->limit("{$offset},{$pagesize}")->order('id desc')->select();
-        $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
-        $Page       = new \Think\Page($count,$pagesize);
-        $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
-        $pagination       = $Page->show();// 分页显示输出
+
+        if($de =='A'){
+            $page = I("p",'int');
+            $pagesize = 10;
+            if($page<=0) $page = 1;
+            $offset = ( $page-1 ) * $pagesize;
+            $where="type = $type";
+            $result=D('news')->where($where)->limit("{$offset},{$pagesize}")->select();
+            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出*
+        }elseif ($de =='B'){
+            $page2 = I("p2",'int');
+            $pagesize2 = 10;
+            if($page2<=0) $page2 = 1;
+            $offset2 = ( $page2-1 ) * $pagesize2;
+            $where="type = $type";
+            $result=D('news')->where($where)->limit("{$offset2},{$pagesize2}")->select();
+            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize2);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出$Page
+        }
         $body=array(
             'de'=>$de,
-            'list'=>$data,
+            'list'=>$result,
             'pagination'=>$pagination,
         );
         $this->assign($body);
@@ -169,11 +187,11 @@ class EditController extends Controller {
             "if_special" => 1,
         );
         //检查之前是否有设置展板
-        $check = D('information')->where('if_special =1')->find();
+        $check = D('news')->where('if_special =1')->find();
         if ($check) {//如果有，先把它清空
             $old = $check['id'];
             M()->startTrans();
-            if (D('information')->where('id =' . $old)->save($data) and D('information')->where('id =' . $id)->save($data1)) {
+            if (D('news')->where('id =' . $old)->save($data) and D('news')->where('id =' . $id)->save($data1)) {
                 $rs['msg'] = 'succ';
                 M()->commit();
             } else {
@@ -182,7 +200,7 @@ class EditController extends Controller {
         }
         else{
             M()->startTrans();
-            if (D('information')->where('id =' . $id)->save($data1)) {
+            if (D('news')->where('id =' . $id)->save($data1)) {
                 $rs['msg'] = 'succ';
                 M()->commit();
             } else {
@@ -198,7 +216,7 @@ class EditController extends Controller {
 
         //type是为区分资讯和产品及解决方案，I是资讯P代表产品
         if($type == 'I'){
-            $image = D('information')->where("id = ".$id)->find();
+            $image = D('news')->where("id = ".$id)->find();
         }
        elseif($type == 'P'){
            $image = D('production')->where("id = ".$id)->find();
@@ -218,9 +236,10 @@ class EditController extends Controller {
             $result['msg'] = 'fail!';
             $this->ajaxReturn($result);
         }
-        $imgurl = I("imgurl");
+        $imgurl = I("pic_path");
+        $thumb = I("information_pic_path");
         //原图地址
-        $picture =str_replace("_thumb",'',$imgurl);
+//        $picture =str_replace("_thumb",'',$imgurl);
         $result = array("msg"=>"fail");
         if(empty($imgurl)){
             $result['msg'] = "无效的提交！";
@@ -228,11 +247,11 @@ class EditController extends Controller {
         }
         if($type == 'I'){
             $data = array(
-                'information_images_path'=>$imgurl,
-                'picture_path'=>$picture
+                'information_pic_path'=>$thumb,
+                'pic_path'=>$imgurl
             );
             M()->startTrans();
-            if(D('information')->where("id = ".$id)->save($data)){
+            if(D('news')->where("id = ".$id)->save($data)){
                 $result['msg'] = 'succ';
                 M()->commit();
             }else{
@@ -240,8 +259,8 @@ class EditController extends Controller {
             }
         }elseif($type == 'P'){
             $data = array(
-                'thumb_path'=>$imgurl,
-                'picture_path'=>$picture
+                'thumb_path'=>$thumb,
+                'picture_path'=>$imgurl
             );
             M()->startTrans();
             if(D('production')->where("id = ".$id)->save($data)){
@@ -256,18 +275,19 @@ class EditController extends Controller {
     }
     //动态资讯新增
     public function addInformation(){
-        $type = I('de');
+        $de = I('de');
         $id = I('id');
         if($id){
-            $check = D('information')->where('id ='.$id)->find();
+            $check = D('news')->where('id ='.$id)->find();
             $check['content'] =htmlspecialchars($check['content']);
            $body = array(
                'one'=>$check,
-               'de'=>$type
+               'de'=>$de,
+               'id'=>$id,
            );
         }else{
             $body = array(
-                'de'=>$type
+                'de'=>$de
             );
         }
         $this->assign($body);
@@ -281,7 +301,7 @@ class EditController extends Controller {
             $type = 1;
         }
         elseif($de == 'B'){
-            $type = 2;
+            $type = 0;
         }
         $title =$_POST["title"];
         $content = $_POST["content"];
@@ -293,7 +313,7 @@ class EditController extends Controller {
                 'save_time'=>date("Y-m-d H:i:s"),
             );
             M()->startTrans();
-            if(D('information')->where("id =".$id)->save($data)){
+            if(D('news')->where("id =".$id)->save($data)){
                 $result['msg'] = 'succ';
                 M()->commit();
             }else{
@@ -308,7 +328,7 @@ class EditController extends Controller {
                 'save_time'=>date("Y-m-d H:i:s"),
             );
             M()->startTrans();
-            if(D('information')->add($data)){
+            if(D('news')->add($data)){
                 $result['msg'] = 'succ';
                 M()->commit();
             }else{
@@ -344,7 +364,7 @@ class EditController extends Controller {
     public function doInfoDelete(){
         $id =I("id",0,'intval');
         $rs = array("msg"=>"fail");
-        if(D("information")->where("id=".$id)->delete()){
+        if(D("news")->where("id=".$id)->delete()){
             $rs['msg'] = 'succ';
         }
         $this->ajaxReturn($rs);
