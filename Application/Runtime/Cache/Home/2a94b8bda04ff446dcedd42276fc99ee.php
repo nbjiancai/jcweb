@@ -66,6 +66,7 @@
 </header>
 
 
+<<<<<<< HEAD
 <!-- 轮播图 -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -109,6 +110,11 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+=======
+<div>
+    <h2>首页图片</h2>
+    <img src="<?php echo ($picture["picture"]); ?>">
+>>>>>>> 87993fb26089b1c8e64bf3a63af2127af410d740
 </div>
 
 <div>
@@ -117,11 +123,11 @@
 </div>
 <div>
     <h2>新闻中心</h2>
-    <?php if(is_array($news)): foreach($news as $key=>$for): ?><a src=""><?php echo ($for["title"]); ?></a><br/><?php endforeach; endif; ?>
+    <?php if(is_array($news)): foreach($news as $key=>$for): ?><a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($for['id']); ?>"><?php echo ($for["title"]); ?></a><br/><?php endforeach; endif; ?>
 </div>
 <div>
     <h2>质检服务</h2>
-    <?php if(is_array($inspection)): foreach($inspection as $key=>$ins): ?><a url=""><?php echo ($ins["title"]); ?></a><?php endforeach; endif; ?>
+    <?php if(is_array($inspection)): foreach($inspection as $key=>$ins): ?><a href="<?php echo U('/home/Information/scopeDetail');?>?id=<?php echo ($ins['id']); ?>"><?php echo ($ins["title"]); ?></a></br><?php endforeach; endif; ?>
 </div>
 <div>
     <h2>联系我们</h2>

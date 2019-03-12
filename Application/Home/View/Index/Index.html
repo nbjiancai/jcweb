@@ -1,4 +1,5 @@
 <include file="Common:head" title="前台导航栏"/>
+<<<<<<< HEAD
 <!-- 轮播图 -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -42,6 +43,11 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+=======
+<div>
+    <h2>首页图片</h2>
+    <img src="{$picture.picture}">
+>>>>>>> 87993fb26089b1c8e64bf3a63af2127af410d740
 </div>
 
 <div>
@@ -51,13 +57,13 @@
 <div>
     <h2>新闻中心</h2>
     <foreach name="news" item="for">
-        <a src="">{$for.title}</a><br/>
+        <a href="{:U('/home/Information/newDetail')}?type=1&id={$for['id']}">{$for.title}</a><br/>
     </foreach>
 </div>
 <div>
     <h2>质检服务</h2>
     <foreach name="inspection" item="ins">
-        <a url="">{$ins.title}</a>
+        <a href="{:U('/home/Information/scopeDetail')}?id={$ins['id']}">{$ins.title}</a></br>
     </foreach>
 </div>
 <div>

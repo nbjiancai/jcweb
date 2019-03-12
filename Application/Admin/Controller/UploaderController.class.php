@@ -44,7 +44,8 @@ class UploaderController extends Controller {
             $imgUrl = $this->cropImage($picAddr,960,540);
             $array = array(
                 'info'=>'succ',
-                'url'=>substr($imgUrl, 1),
+                'information_pic_path'=>substr($imgUrl, 1),
+                'pic_path'=>substr($picAddr, 1),
             );
             if($return){
                 return $array;
@@ -97,7 +98,7 @@ class UploaderController extends Controller {
             $saveUrl = './Public/attached/'.$info['file']['savepath'].$info['file']['savename'];
             $picAddr = $saveUrl;
             $exif = exif_read_data($picAddr);
-            $image = imagecreatefromjpeg($picAddr);
+            $image = imagecreatefromjpeg($picAddr);//载入图像
             if($exif['Orientation'] == 3) {
                 $result = imagerotate($image, 180, 0);
                 imagejpeg($result, $picAddr, 100);
@@ -165,14 +166,57 @@ class UploaderController extends Controller {
             }
         }
     }
-
+    /**
+     * [upload_img 实验室图片上传]
+     * @return [type] [description]
+     */
+    public function start5($return=false){
+        $upload = new \Think\Upload();
+        $upload->maxSize   =     0 ;
+        $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');
+        $upload->rootPath  =     './Public/attached/'; // 设置附件上传根目录
+        $upload->savePath  =     '';
+        $upload->saveName = 'time';
+        $info   =   $upload->upload();
+        if(!$info) {// 上传错误提示错误信息
+            $array['info'] = $upload->getError();
+        }else{// 上传成功 获取上传文件信息
+            $saveUrl = './Public/attached/'.$info['file']['savepath'].$info['file']['savename'];
+            $picAddr = $saveUrl;
+            $exif = exif_read_data($picAddr);
+            $image = imagecreatefromjpeg($picAddr);
+            if($exif['Orientation'] == 3) {
+                $result = imagerotate($image, 180, 0);
+                imagejpeg($result, $picAddr, 100);
+            } elseif($exif['Orientation'] == 6) {
+                $result = imagerotate($image, -90, 0);
+                imagejpeg($result, $picAddr, 100);
+            } elseif($exif['Orientation'] == 8) {
+                $result = imagerotate($image, 90, 0);
+                imagejpeg($result, $picAddr, 100);
+            }
+            isset($result) && imagedestroy($result);
+            imagedestroy($image);
+            $imgUrl = $this->cropImage($picAddr,150,100);
+            $array = array(
+                'info'=>'succ',
+                'thumb_url'=>substr($imgUrl, 1),
+                'url'=>substr($saveUrl,1)
+            );
+            if($return){
+                return $array;
+            }else{
+                echo json_encode($array);
+            }
+        }
+    }
     /**
      * 缩略图
      */
     private function cropImage($img,$width=0,$height=0){
         $image = new \Think\Image(); 
         $image->open($img);
-        $base = pathinfo($img);
+        $base = pathinfo($img);//返回路径的数组信息
         $thumb = $base['dirname'] .'/'. $base['filename'].'_thumb.'.$base['extension'];
         $image->thumb($width, $height,\Think\Image::IMAGE_THUMB_CENTER)->save($thumb);
         return $thumb;

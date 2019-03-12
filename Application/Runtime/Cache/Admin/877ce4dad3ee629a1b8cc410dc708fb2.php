@@ -290,12 +290,12 @@
                     <label class="col-sm-2 control-label talign-center fz13">照片</label>
                     <div class="col-sm-10">
                         <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
-                            <?php if($type == I): ?><img src="<?php echo ($image['information_images_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" />
+                            <?php if($type == I): ?><img src="<?php echo ($image['information_pic_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" />
                                 <?php else: ?>
                                 <img src="<?php echo ($image['thumb_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" /><?php endif; ?>
-
                         </div>
-                        <?php if($type == I ): ?><input type="hidden" name="imgurl" value="<?php echo ($image['information_images_path']); ?>" />
+                        <?php if($type == I ): ?><input type="hidden" name="information_pic_path" value="<?php echo ($image['information_pic_path']); ?>" />
+                            <input type="hidden" name="pic_path" value="<?php echo ($image['pic_path']); ?>" />
                             <?php else: ?>
                             <input type="hidden" name="imgurl" value="<?php echo ($image['thumb_path']); ?>" /><?php endif; ?>
 
@@ -333,8 +333,9 @@
                     $("#addfile").val("");
                     //alert(ret.url);
                     if(ret.info=='succ'){
-                        $("input[name='imgurl']").val(ret.url);
-                        $("#attachment img").attr("src",ret.url);
+                        $("input[name='information_pic_path']").val(ret.information_pic_path);
+                        $("input[name='pic_path']").val(ret.pic_path);
+                        $("#attachment img").attr("src",ret.information_pic_path);
                     }else{
                         var _options = {"text":"上传失败","flag":"error"};
                         if(ret.info) _options.text = ret.info;
