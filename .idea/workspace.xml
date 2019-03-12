@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="95cbbb66-7238-4b9e-bcd3-26c27debaf95" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/Controller/EditController.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Admin/Controller/EditController.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Edit/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Admin/View/Edit/aboutus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Admin/View/Edit/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Admin/View/Edit/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/42c67e22c0f3bf0d03f11e9cd77ded59.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/42c67e22c0f3bf0d03f11e9cd77ded59.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/693fb95b42aef6a4f677611d1562b6e3.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/693fb95b42aef6a4f677611d1562b6e3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/c66e3b991759499162b9bff69eff76b1.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Admin/c66e3b991759499162b9bff69eff76b1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/ac9b0a1cace77cd5c2d36c4a0dfdeb0e.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/ac9b0a1cace77cd5c2d36c4a0dfdeb0e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/19_03_12.log" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Logs/Home/19_03_12.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/View/Index/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Home/View/Index/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" beforeDir="false" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/Runtime/Logs/Home/19_03_12.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/picture/lab_image/20130301082708_76145.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Public/picture/lab_image/20130301082708_76145.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +23,8 @@
       <file leaf-file-name="EditController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/EditController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="676" lean-forward="true" selection-start-line="676" selection-end-line="676" />
+            <state relative-caret-position="473">
+              <caret line="673" column="49" selection-start-line="673" selection-start-column="49" selection-end-line="673" selection-end-column="49" />
               <folding>
                 <element signature="e#34#55#0#PHP" expanded="true" />
               </folding>
@@ -139,8 +135,9 @@
       <find>about</find>
       <find>showsa</find>
       <find>show</find>
-      <find>shows</find>
       <find>addfile</find>
+      <find>shows</find>
+      <find>sho</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +176,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP5.6.35" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -208,36 +205,12 @@
               <item name="jcweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="jcweb" type="462c0819:PsiDirectoryNode" />
               <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Runtime" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="jcweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="jcweb" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jcweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jcweb" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Edit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jcweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jcweb" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jcweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jcweb" type="462c0819:PsiDirectoryNode" />
-              <item name="Application" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
+              <item name="ThinkPHP" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -280,16 +253,15 @@
       <workItem from="1552095875069" duration="5745000" />
       <workItem from="1552267710353" duration="1154000" />
       <workItem from="1552285735674" duration="18951000" />
-      <workItem from="1552352120898" duration="17972000" />
+      <workItem from="1552352120898" duration="18390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94531000" />
+    <option name="totallyTimeSpent" value="94958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16286863" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -319,13 +291,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Edit/information.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/UploaderController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3838">
@@ -668,10 +633,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Runtime/Logs/Home/19_03_12.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1140" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/EditController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="676" lean-forward="true" selection-start-line="676" selection-end-line="676" />
+        <state relative-caret-position="473">
+          <caret line="673" column="49" selection-start-line="673" selection-start-column="49" selection-end-line="673" selection-end-column="49" />
           <folding>
             <element signature="e#34#55#0#PHP" expanded="true" />
           </folding>
