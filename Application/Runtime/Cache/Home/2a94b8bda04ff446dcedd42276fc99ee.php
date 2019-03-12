@@ -66,7 +66,6 @@
 </header>
 
 
-<<<<<<< HEAD
 <!-- 轮播图 -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -110,38 +109,251 @@
       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
-=======
-<div>
-    <h2>首页图片</h2>
-    <img src="<?php echo ($picture["picture"]); ?>">
->>>>>>> 87993fb26089b1c8e64bf3a63af2127af410d740
 </div>
 
-<div>
-    <h2>中心简介</h2>
-    <p><?php echo ($intro["content"]); ?></p>
-</div>
-<div>
-    <h2>新闻中心</h2>
-    <?php if(is_array($news)): foreach($news as $key=>$for): ?><a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($for['id']); ?>"><?php echo ($for["title"]); ?></a><br/><?php endforeach; endif; ?>
-</div>
-<div>
-    <h2>质检服务</h2>
-    <?php if(is_array($inspection)): foreach($inspection as $key=>$ins): ?><a href="<?php echo U('/home/Information/scopeDetail');?>?id=<?php echo ($ins['id']); ?>"><?php echo ($ins["title"]); ?></a></br><?php endforeach; endif; ?>
-</div>
-<div>
-    <h2>联系我们</h2>
-    <div>
-        <text>postal_code:</text><text><?php echo ($contact["postal_code"]); ?></text><br/>
-        <text>address:</text><text><?php echo ($contact["address"]); ?></text><br/>
-        <text>phone_number:</text><text><?php echo ($contact["phonenumber"]); ?></text><br/>
-        <text>consult_phone:</text><text><?php echo ($contact["consult_phone"]); ?></text><br/>
-        <text>email:</text><text><?php echo ($contact["email"]); ?></text><br/>
+<!-- 内容区域 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3 col-md-2">
+            <ul class="list-group">
+                <li class="list-group-item">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+              </ul>
+              <ul class="list-group">
+                <li class="list-group-item">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+                <li class="list-group-item">
+                    <span>首届华东六省...</span>
+                    <span>2019-03-12</span>
+                </li>
+              </ul>
+        </div>
+        <div class="col-xs-6 col-md-8">
+            <div>
+                <span class="glyphicon glyphicon-leaf"></span>
+                <span>中心简介</span>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-xs-4 col-md-4">
+                    <div id="carousel-introduce" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                          <li data-target="#carousel-introduce" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-introduce" data-slide-to="1"></li>
+                          <li data-target="#carousel-introduce" data-slide-to="2"></li>
+                          <li data-target="#carousel-introduce" data-slide-to="3"></li>
+                        </ol>
+                      
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                          <div class="item active">
+                            <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="轮播图">
+                            <div class="carousel-caption">
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                            <div class="carousel-caption">
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                            <div class="carousel-caption">
+                            </div>
+                          </div>
+                          <div class="item">
+                            <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                            <div class="carousel-caption">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-8 col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-mdd-6">
+                    <div>
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        <span>新闻中心</span>
+                    </div>
+                    <hr />
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-xs-6 col-mdd-6">
+                    <div>
+                        <span class="glyphicon glyphicon-leaf"></span>
+                        <span>质检服务</span>
+                    </div>
+                    <hr />
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span>首届华东六省...</span>
+                            <span>2019-03-12</span>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3 col-md-2">
+            <div>
+                <span class="glyphicon glyphicon-leaf"></span>
+                <span>质检服务</span>
+            </div>
+            <hr />
+            <form role="form">
+                <div class="form-group">
+                    <label for="department">受检单位</label>
+                    <input type="text" class="form-control" id="department" 
+                            placeholder="请输入单位名称">
+                    <label for="centerNum">中心编号</label>
+                    <input type="text" class="form-control" id="centerNum" 
+                            placeholder="请输入中心编号">
+                    <label for="code">验证码</label>
+                    <input type="text" class="form-control" id="code" 
+                            placeholder="请输入验证码">
+                </div>
+                <button type="submit" class="btn btn-primary">提交</button>
+            </form>
+        </div>
     </div>
 </div>
-<div>
-    <h2>实验室风采</h2>
-    <?php if(is_array($lab_picture)): foreach($lab_picture as $key=>$vo): ?><img src=<?php echo ($vo["pic_path"]); ?>><?php endforeach; endif; ?>
+<!-- 实验室风采 -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div>
+                <span class="glyphicon glyphicon-leaf"></span>
+                <span>实验室风采</span>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="thumbnail">
+                        <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                        <div class="caption">
+                            <p>Thumbnail label</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="thumbnail">
+                        <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                        <div class="caption">
+                            <p>Thumbnail label</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="thumbnail">
+                        <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                        <div class="caption">
+                            <p>Thumbnail label</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="thumbnail">
+                        <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                        <div class="caption">
+                            <p>Thumbnail label</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="thumbnail">
+                        <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                        <div class="caption">
+                            <p>Thumbnail label</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-2 col-lg-2">
+                    <div class="thumbnail">
+                        <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
+                        <div class="caption">
+                            <p>Thumbnail label</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div class="container" ><div class="hr"><span class="hr-inner"></span></div></div>
 <!--footer start-->
