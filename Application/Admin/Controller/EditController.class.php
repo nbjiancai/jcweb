@@ -638,54 +638,46 @@ class EditController extends Controller {
     }
     public function show(){
         $type = I('type');
-        $imgurl = D('aboutus')->where("type = 1")->find();
-        $list = D('aboutus')->where("type = 2")->select();
-        $sortby = $list['sortby'];
-        if($type == 1){
-            $body = array(
-                'data'=>$imgurl,
-                'lists'=>$list,
-                'type'=>$type,
-            );
-        }else{
-            $body = array(
-                'lists'=>$list,
-                'type'=>$type,
-                'sortby'=>$sortby,
-            );
-        }
-
+        $where = "type = {$type}";
+        $image = D('head_image')->where($where)->find();
+        $body = array(
+            'type'=>$type,
+            'image'=>$image,
+        );
         $this->assign($body);
         $this->display();
     }
     public function showSave(){
         $rs = array("msg"=>"fail");
         $type = I('type');
-        $sortby = I('sortby');
-        $img = I("imgurl");
-        if(empty($img)){
+        $pic_path = I("pic_path");
+        $information_pic_path = I("information_pic_path");
+        if(empty($pic_path)){
             $rs['msg'] = "无效的提交！";
             $this->ajaxReturn($rs);
         }
-        $picture =str_replace("_thumb",'',$img);
         $data = array(
             'type'=>$type,
-            'thumb_path'=>$img,
-            'picture_path'=>$picture,
-            'sortby'=>$sortby,
+            'information_pic_path'=>$information_pic_path,
+            'pic_path'=>$pic_path,
             'save_time'=>date("Y-m-d H:i:s"),
         );
-        $type = I('type');
-        if($type == 1){
-            if(D('aboutus')->where("type = 1")->save($data)){
+
+        $where = "type = {$type}";
+        if(D('head_image')->where($where)->find($data)){
+            if(D('head_image')->where($where)->save($data)){
                 $rs['msg'] = 'succ';
             }
+
+            $this->ajaxReturn($rs);
         }else{
-            if(D('aboutus')->add($data)){
+            if(D('head_image')->where($where)->add($data)){
                 $rs['msg'] = 'succ';
             }
+
+            $this->ajaxReturn($rs);
         }
-        $this->ajaxReturn($rs);
+
     }
     //照片删除
     public function showDelete(){

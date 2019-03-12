@@ -289,24 +289,14 @@
                 <div class="form-group">
                     <label class="col-sm-2 control-label talign-center fz13">照片</label>
                     <div class="col-sm-10">
-                        <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()"><img src="<?php echo ($data['thumb_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" /></div>
-                        <input type="hidden" name="imgurl" value="" />
+                        <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()"><img src="<?php echo ($image['information_pic_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" /></div>
+                        <input type="hidden" name="pic_path" value="" />
+                        <input type="hidden" name="information_pic_path" value="" />
                         <input type="hidden" name="type" value="<?php echo ($type); ?>" />
                         <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" style="display:none;"  />
-                        <?php if($type == 2): ?><p class="help-block">最佳尺寸437*618（资质照片不做裁剪）</p><?php endif; ?>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <?php if($type == 2): ?><div class="form-group form-group-sm" >
-                    <label class="col-sm-2 control-label talign-right fz13">横排/竖排</label>
-                    <div class="col-sm-10">
-                        <select name="sortby">
-                            <option value="1" <?php if($sortby==1){echo 'selected';} ?>>横排</option>
-                            <option value="2" <?php if($sortby==2){echo 'selected';} ?>>竖排</option>
-                        </select>
-                    </div>
-                    <div class="clearfix"></div>
-                </div><?php endif; ?>
                 <div class="form-group">
                     <label class="col-sm-2 control-label talign-center">&nbsp;</label>
                     <div class="col-sm-10">
@@ -317,28 +307,6 @@
                 </div>
             </form>
         </div>
-<?php if($type == 2): ?><div>
-            <table class="table table-bordered table-striped table-hover">
-                <thead>
-                <th width="70%">图片</th>
-                <th>排列方式</th>
-                <th>操作</th>
-                </thead>
-                <tbody>
-                <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
-                        <td>
-                            <a href="javascript:void(0);" name="<?php echo ($one["thumb_path"]); ?>" onclick="return Check(this);">
-                                <img src="<?php echo ($one["thumb_path"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="width: 90px;"/>
-                            </a>
-                        </td>
-                        <td><?php if($one['sortby']==1){echo '横排';}else{echo '竖排';} ?></td>
-                        <td><a href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> 删除</a>
-                        </td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
-            </table>
-            <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
-        </div><?php endif; ?>
     </div>
 </div>
 </div>
@@ -358,8 +326,9 @@
                     $("#addfile").val("");
                     //alert(ret.url);
                     if(ret.info=='succ'){
-                        $("input[name='imgurl']").val(ret.url);
-                        $("#attachment img").attr("src",ret.url);
+                        $("input[name='pic_path']").val(ret.pic_path);
+                        $("input[name='information_pic_path']").val(ret.information_pic_path);
+                        $("#attachment img").attr("src",ret.pic_path);
                     }else{
                         var _options = {"text":"上传失败","flag":"error"};
                         if(ret.info) _options.text = ret.info;
