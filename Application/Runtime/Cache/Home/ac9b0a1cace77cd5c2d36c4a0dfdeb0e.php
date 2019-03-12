@@ -82,12 +82,10 @@
 </header>
 
 
-<a name="notice">通知公告</a></br>
-<?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($vo['id']); ?>"><?php echo ($vo["title"]); ?></a></br><?php endforeach; endif; else: echo "" ;endif; ?>
-<nav><?php echo ($pagination1); ?></nav>
-<a name="industry">行业新闻</a></br>
-<?php if(is_array($industry)): $i = 0; $__LIST__ = $industry;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($vo['id']); ?>"><?php echo ($vo["title"]); ?></a></br><?php endforeach; endif; else: echo "" ;endif; ?>
-<nav><?php echo ($pagination2); ?></nav>
+<h2>机构设置</h2>
+<div>
+    <?php echo ($structure["content"]); ?>
+</div>
 <div>
     <h2>页脚</h2>
     <div>

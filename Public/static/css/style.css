@@ -44,9 +44,10 @@ p { line-height: 22px }
 .navbar-brand {
     color: #ffffff;
     font-size: 25px;
-    font-weight: 100;
+    font-weight: bold;
     line-height: 30px;
     margin-top: 35px;
+    margin-left: 20px;
     padding: 0;
 }
 
@@ -62,7 +63,7 @@ p { line-height: 22px }
     margin-right: 0;
     z-index: 199;
 }
-.head-section .navbar-default { background-color: #002d53; }
+.head-section nav{ background-color: #1E50AE; }
 .head-section .nav li a,
 .head-section .nav li.active ul.dropdown-menu li a {
     color: #ffffff;
@@ -80,7 +81,7 @@ ul.dropdown-menu { border: none }
 .head-section .nav li.active ul.dropdown-menu li a:hover,
 .head-section .nav li.active ul.dropdown-menu li.active a {
     color: #fff;
-    background-color: #002d53;
+    background-color: #1E50AE;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -91,7 +92,7 @@ ul.dropdown-menu { border: none }
 .head-section .navbar-default .navbar-nav > .open > a:hover,
 .head-section .navbar-default .navbar-nav > .open > a:focus {
     color: #fff;
-    background-color: #002d53;
+    background-color: #1E50AE;;
     -webkit-transition: all .3s ease;
     -moz-transition: all .3s ease;
     -ms-transition: all .3s ease;
@@ -3003,7 +3004,7 @@ div.header h3{
     margin: 0 0 30px;
     width: 300px;
     height: 3px;
-    background: #002d53;
+    background: #1E50AE;
     display: inline-block;
 }
 
@@ -3168,7 +3169,7 @@ div.header h3{
     letter-spacing: 2px;
 }
 .news-none-image .row:hover span{
-    box-shadow: -3px 3px 6px #002d53;
+    box-shadow: -3px 3px 6px #1E50AE;
     color: #337ab7;
 
 }
@@ -3192,7 +3193,7 @@ div.header h3{
 
 /*高德地图*/
 #gaodemap{
-    border: 1px solid #002d53;
+    border: 1px solid #1E50AE;
 }
 /*固定container容器宽度*/
 .container{

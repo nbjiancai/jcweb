@@ -66,63 +66,6 @@
 </header>
 
 
-<!-- 轮播图 -->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    </ol>
-  
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="/Public/picture/lab_image/1.jpg" alt="轮播图">
-        <div class="carousel-caption">
-        </div>
-      </div>
-      <div class="item">
-        <img src="/Public/picture/lab_image/2.jpg" alt="...">
-        <div class="carousel-caption">
-        </div>
-      </div>
-      <div class="item">
-        <img src="/Public/picture/lab_image/3.jpg" alt="...">
-        <div class="carousel-caption">
-        </div>
-      </div>
-      <div class="item">
-        <img src="/Public/picture/lab_image/4.jpg" alt="...">
-        <div class="carousel-caption">
-        </div>
-      </div>
-    </div>
-  
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-
-<div>
-    <h2>中心简介</h2>
-    <p><?php echo ($intro["content"]); ?></p>
-</div>
-<div>
-    <h2>新闻中心</h2>
-    <?php if(is_array($news)): foreach($news as $key=>$for): ?><a src=""><?php echo ($for["title"]); ?></a><br/><?php endforeach; endif; ?>
-</div>
-<div>
-    <h2>质检服务</h2>
-    <?php if(is_array($inspection)): foreach($inspection as $key=>$ins): ?><a url=""><?php echo ($ins["title"]); ?></a><?php endforeach; endif; ?>
-</div>
 <div>
     <h2>联系我们</h2>
     <div>
@@ -133,40 +76,18 @@
         <text>email:</text><text><?php echo ($contact["email"]); ?></text><br/>
     </div>
 </div>
+<div id="container"></div>
 <div>
-    <h2>实验室风采</h2>
-    <?php if(is_array($lab_picture)): foreach($lab_picture as $key=>$vo): ?><img src=<?php echo ($vo["pic_path"]); ?>><?php endforeach; endif; ?>
+    <h2>页脚</h2>
+    <div>
+        <text>copyright:</text><text><?php echo ($footer["title"]); ?></text><br/>
+        <text>email:</text><text><?php echo ($footer["email"]); ?></text><br/>
+        <text>备案号:</text><text><?php echo ($footer["record"]); ?></text><br/>
+        <text>地址:</text><text><?php echo ($footer["address"]); ?></text><br/>
+        <text>telephone1:</text><text><?php echo ($footer["telephone"]); ?></text><br/>
+        <text>telephone2:</text><text><?php echo ($footer["telephone2"]); ?></text><br/>
+    </div>
 </div>
-<div class="container" ><div class="hr"><span class="hr-inner"></span></div></div>
-<!--footer start-->
-<footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="address wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-        <address>
-          <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
-            <p><i class="fa fa-home pr-10"></i>地址: <?php echo ($rs["address"]); ?></p></div>
-          <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
-            <p><i class="fa fa-mobile pr-10"></i>联系电话 : <?php echo ($rs["telephone"]); ?> </p></div>
-          <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".7s">
-            <p><i class="fa fa-envelope pr-10"></i> Email : <?php echo ($rs["email"]); ?></p></div>
-        </address>
-      </div>
-    </div>
-  </div>
-  <div style="padding-bottom: 20px"></div>
-  <!--small footer start -->
-  <div class="footer-small">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-xs-8">
-            <div class="copyright"> <p>Copyright © 2013-2018 BUPT All Rights Reserved. 备案号：闽ICP备15012807号-1</p>
-            </div>
-        </div>
-    </div>
-    </div>
-  </div>
-</footer>
 
 <script type="text/javascript" >
     var map = new AMap.Map('container', {

@@ -314,8 +314,8 @@
                 <tbody>
                 <?php if(is_array($lists)): $i = 0; $__LIST__ = $lists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
                         <td>
-                            <a href="javascript:void(0);" name="<?php echo ($one["picture_name"]); ?>" onclick="return Check(this);">
-                                <img src="<?php echo ($one["picture"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" class="img-responsive" style="max-width: 500px;"/>
+                            <a href="javascript:void(0);" name="<?php echo ($one["pic_name"]); ?>" onclick="return Check(this);">
+                                <img src="<?php echo ($one["pic_path"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" class="img-responsive" style="max-width: 500px;"/>
                             </a>
                         </td>
                         <td><a href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> 删除</a>

@@ -1,0 +1,1487 @@
+[ 2019-03-07T11:13:48+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000253s ]
+ERR: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+
+[ 2019-03-07T11:17:33+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0141s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053811s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000749s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2019-03-07T11:17:34+08:00 ] 127.0.0.1 /index.php/admin/account/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000163s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0096s ]
+NOTIC: [8] Undefined variable: body E:\wamp64\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000225s ]
+
+[ 2019-03-07T11:17:34+08:00 ] 127.0.0.1 /index.php/admin/Account/yzmCode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000246s ]
+
+[ 2019-03-07T11:17:47+08:00 ] 127.0.0.1 /index.php/admin/Account/yzmCode.html?0.3480830229540892
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000485s ]
+
+[ 2019-03-07T11:17:52+08:00 ] 127.0.0.1 /index.php/admin/account/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000222s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000229s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0108s ]
+SQL: SELECT * FROM `common_system_user` WHERE `username` = 'admin' AND `passwd` = 'dd6e5e5918e94d997c686fcebc56922f' AND `status` = 1 LIMIT 1   [ RunTime:0.0017s ]
+SQL: UPDATE `common_system_user` SET `login_time`='2019-03-07 11:17:52' WHERE ( id=1 ) [ RunTime:0.0014s ]
+NOTIC: [8] Undefined variable: role E:\wamp64\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: role E:\wamp64\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 56 行.
+NOTIC: [8] Undefined variable: menus E:\wamp64\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 60 行.
+
+[ 2019-03-07T11:17:52+08:00 ] 127.0.0.1 /index.php/admin/account/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000215s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000124s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000172s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0057s ]
+
+[ 2019-03-07T11:17:52+08:00 ] 127.0.0.1 /index.php/admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000236s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006238s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000796s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000258s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000328s ]
+
+[ 2019-03-07T11:17:52+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029945s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000200s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000245s ]
+
+[ 2019-03-07T11:17:53+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0216s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0017s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T11:17:53+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551928673136
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000323s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002198s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002496s ]
+
+[ 2019-03-07T11:17:57+08:00 ] 127.0.0.1 /admin/main/lunbo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000261s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0105s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `home_image` LIMIT 0,10   [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: centreno E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 303 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000242s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000302s ]
+
+[ 2019-03-07T11:17:58+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551928678003
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000137s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000192s ]
+
+[ 2019-03-07T11:18:03+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0198s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004633s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2019-03-07T11:18:03+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000173s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003337s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003405s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000170s ]
+
+[ 2019-03-07T11:18:03+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0071s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0018s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T11:18:03+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551928683755
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000119s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000252s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0042s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000185s ]
+
+[ 2019-03-07T11:18:07+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000233s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000191s ]
+
+[ 2019-03-07T11:18:07+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0048s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006109s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000189s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000122s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000165s ]
+
+[ 2019-03-07T11:18:07+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000213s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0091s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0034s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T11:18:08+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551928688081
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0048s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2019-03-07T11:18:08+08:00 ] 127.0.0.1 /admin/main/lunbo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000156s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `home_image` LIMIT 0,10   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: centreno E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 303 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000139s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000188s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000184s ]
+
+[ 2019-03-07T11:18:08+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551928688640
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000158s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0063s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000174s ]
+
+[ 2019-03-07T11:21:04+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003485s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000211s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000253s ]
+
+[ 2019-03-07T11:21:04+08:00 ] 127.0.0.1 /index.php/admin/account/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000232s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0054s ]
+NOTIC: [8] Undefined variable: body E:\wamp64\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000155s ]
+
+[ 2019-03-07T11:21:04+08:00 ] 127.0.0.1 /index.php/admin/Account/yzmCode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000087s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000539s ]
+
+[ 2019-03-07T15:10:09+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000208s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015710s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000264s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000309s ]
+
+[ 2019-03-07T15:10:09+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000202s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000224s ]
+
+[ 2019-03-07T15:10:09+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0074s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0026s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:10+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942609984
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000265s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0068s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000225s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000299s ]
+
+[ 2019-03-07T15:10:12+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000221s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000171s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000227s ]
+
+[ 2019-03-07T15:10:13+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0184s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003182s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000183s ]
+
+[ 2019-03-07T15:10:13+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000169s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0065s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0021s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:13+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942613154
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000298s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0094s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000249s ]
+
+[ 2019-03-07T15:10:14+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000245s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000177s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000203s ]
+
+[ 2019-03-07T15:10:14+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000214s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000326s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0062s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004544s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000204s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000269s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000358s ]
+
+[ 2019-03-07T15:10:14+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000131s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000306s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0072s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0017s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:14+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942614959
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000267s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0054s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000226s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000336s ]
+
+[ 2019-03-07T15:10:15+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000172s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0086s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003286s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003353s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000164s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000213s ]
+
+[ 2019-03-07T15:10:15+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0057s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003991s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000357s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000237s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000357s ]
+
+[ 2019-03-07T15:10:15+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000221s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000203s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0069s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0028s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:15+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942615918
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0052s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000130s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000190s ]
+
+[ 2019-03-07T15:10:16+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002545s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002605s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000186s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000119s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000168s ]
+
+[ 2019-03-07T15:10:16+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000151s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000237s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0042s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000101s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003503s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000175s ]
+
+[ 2019-03-07T15:10:16+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000141s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0061s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0034s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:16+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942616773
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000202s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000125s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000187s ]
+
+[ 2019-03-07T15:10:17+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000230s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0183s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000180s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2019-03-07T15:10:17+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000256s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0159s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003424s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003482s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000242s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000311s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000408s ]
+
+[ 2019-03-07T15:10:17+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0058s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0024s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:17+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942617468
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000171s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0062s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2019-03-07T15:10:18+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0083s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003879s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000236s ]
+
+[ 2019-03-07T15:10:18+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000234s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0045s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000178s ]
+
+[ 2019-03-07T15:10:18+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000113s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0083s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0023s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:18+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942618743
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000228s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000236s ]
+
+[ 2019-03-07T15:10:25+08:00 ] 127.0.0.1 /admin/password/updatepassword
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000216s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0092s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018139s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018196s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000262s ]
+
+[ 2019-03-07T15:10:25+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942625119
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000195s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0251s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2019-03-07T15:10:26+08:00 ] 127.0.0.1 /admin/auth/navlist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0066s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path` FROM `common_admin_nav` ORDER BY pid asc,disorder asc  [ RunTime:0.0024s ]
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054962s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000144s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000208s ]
+
+[ 2019-03-07T15:10:26+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942626818
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000202s ]
+
+[ 2019-03-07T15:10:52+08:00 ] 127.0.0.1 /admin/auth/group
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000295s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `common_role` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `common_role`  [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000186s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000237s ]
+
+[ 2019-03-07T15:10:52+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942652739
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000187s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000123s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000178s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0054s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000250s ]
+
+[ 2019-03-07T15:10:53+08:00 ] 127.0.0.1 /admin/auth/admins
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0158s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `common_system_user` LIMIT 0,20   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `common_system_user` LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `common_role` [ RunTime:0.0195s ]
+SQL: SELECT `id`,`rolename` FROM `common_role` WHERE ( status=1 )  [ RunTime:0.0011s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000159s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000221s ]
+
+[ 2019-03-07T15:10:53+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942653435
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000333s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000291s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000400s ]
+
+[ 2019-03-07T15:10:55+08:00 ] 127.0.0.1 /admin/main/lunbo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000125s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000212s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `home_image` LIMIT 0,10   [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined variable: centreno E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 303 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014997s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015058s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000205s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000268s ]
+
+[ 2019-03-07T15:10:55+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942655765
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000177s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0050s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000204s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000299s ]
+
+[ 2019-03-07T15:10:57+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002574s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000169s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000165s ]
+
+[ 2019-03-07T15:10:57+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000190s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0082s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004636s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004696s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000201s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000127s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000203s ]
+
+[ 2019-03-07T15:10:57+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000160s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0053s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0067s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0024s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:57+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942657235
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000229s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0055s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000129s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000186s ]
+
+[ 2019-03-07T15:10:58+08:00 ] 127.0.0.1 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.002626s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.002690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2019-03-07T15:10:58+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000182s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0055s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003928s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000203s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000218s ]
+
+[ 2019-03-07T15:10:58+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000191s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0048s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0198s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0036s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 E:\wamp64\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-07T15:10:58+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942658719
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000175s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000261s ]
+
+[ 2019-03-07T15:10:59+08:00 ] 127.0.0.1 /admin/main/lunbo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000173s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000223s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `home_image` LIMIT 0,10   [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+NOTIC: [8] Undefined variable: centreno E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 303 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+NOTIC: [8] Undefined index: pic_name E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 317 行.
+NOTIC: [8] Undefined index: pic_path E:\wamp64\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 318 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006882s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2019-03-07T15:10:59+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1551942659195
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000182s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') E:\wamp64\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000141s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000230s ]
+
