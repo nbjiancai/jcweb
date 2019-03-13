@@ -286,45 +286,38 @@
     <div id="page-inner" class="container">
         <form class="form-horizontal" id="myform" action="" method="post">
             <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">欢迎语第一行</label>
+                <label class="col-sm-2 control-label talign-center fz13">备案号</label>
                 <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="words1" value="<?php echo ($words1); ?>">
+                    <input type="text" class="col-sm-10" name="postal_code" value="<?php echo ($postal_code); ?>">
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">欢迎语第二行</label>
+                <label class="col-sm-2 control-label talign-center fz13">地址</label>
                 <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="words2" value="<?php echo ($words2); ?>">
+                    <input type="text" class="col-sm-10" name="address" value="<?php echo ($address); ?>">
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">公司名称</label>
+                <label class="col-sm-2 control-label talign-center fz13">联系电话/传真</label>
                 <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="company_name" value="<?php echo ($company_name); ?>">
+                    <input type="text" class="col-sm-10" name="phonenumber" value="<?php echo ($phonenumber); ?>">
                 </div>
                 <div class="clearfix"></div>
             </div>
 
             <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">联系电话</label>
+                <label class="col-sm-2 control-label talign-center fz13">真伪查询电话</label>
                 <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="telephone" value="<?php echo ($telephone); ?>">
+                    <input type="text" class="col-sm-10" name="consult_phone" value="<?php echo ($consult_phone); ?>">
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">咨询邮箱</label>
+                <label class="col-sm-2 control-label talign-center fz13">邮箱</label>
                 <div class="col-sm-10">
                     <input type="text" class="col-sm-10" name="email" value="<?php echo ($email); ?>">
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">公司地址</label>
-                <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="address" value="<?php echo ($address); ?>">
                 </div>
                 <div class="clearfix"></div>
             </div>

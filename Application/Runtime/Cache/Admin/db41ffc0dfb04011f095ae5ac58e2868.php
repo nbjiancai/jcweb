@@ -285,68 +285,77 @@
 </script>
     <div id="page-inner" class="container">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/news?de=A" >行业新闻</a></li>
-            <li role="presentation" class="active" id="de_B" name="de"><a href="/admin/edit/news?de=B" >通知公告</a></li>
-            <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/show.html?type=2" >顶部图片</a></li>
+            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/inspection?de=A" >检测流程</a></li>
+            <li role="presentation" class="active" id="de_B" name="de"><a href="/admin/edit/inspection?de=B" >质检范围</a></li>
+            <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/show.html?type=3" >顶部图片</a></li>
             <input type="hidden" id="de_choose" value="<?php echo ($de); ?>"/>
         </ul>
         <p></p>
-        <div>
-
-            <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addInformation');?>?de=<?php echo ($de); ?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
-
-            <table class="table table-bordered table-striped table-hover">
-                <thead>
-                <th width="15%">展示图</th>
-                <th width="50%">
-                    <?php if($de == A): ?>行业新闻标题<?php endif; ?>
-                    <?php if($de == B): ?>通知公告标题<?php endif; ?>
-                </th>
-                <th >操作</th>
-                </thead>
-                <tbody>
-                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
-                        <td ><img src="<?php echo ($one["information_pic_path"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="width: 90px;"></td>
-                        <td ><?php echo ($one["title"]); ?></td>
-                        <td>
-                            <?php if($one['if_special'] == 0): ?><a class="btn btn-info btn-xs" href="javascript:void(0);" onclick="doSpecial('<?php echo ($one["id"]); ?>')"><i class="glyphicon glyphicon-cog"></i>设为展板</a><?php endif; ?>
-                            <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/informationPicture');?>?id=<?php echo ($one["id"]); ?>&type=I" ><i class="glyphicon glyphicon-picture"></i>插入/更换产品图片</a>
-                            <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/addInformation');?>?id=<?php echo ($one["id"]); ?>" ><i class="glyphicon glyphicon-cog"></i>修改内容</a>
-                            <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" ><i class="glyphicon glyphicon-trash"></i>删除</a>
-                        </td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-                </tbody>
-            </table>
-            <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
-
-        </div>
+        <?php if($de == A): ?><form class="form-horizontal" id="myform" action="" method="post">
+                <div class="form-group">
+                    <label class="col-sm-1 control-label talign-center fz13"></label>
+                    <div class="col-sm-11">
+                        <button type="submit" class="btn btn-success " onclick="doAdd()">保存</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <input type="hidden" name="de" value="<?php echo ($de); ?>"/>
+                <div class="form-group">
+                    <label class="col-sm-1 control-label talign-center fz13">内容</label>
+                    <div class="col-sm-11">
+                        <textarea id="content" name="content" ><?php echo ($one["content"]); ?></textarea>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form><?php endif; ?>
+        <?php if($de == B): ?><div>
+                <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addInspection');?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                    <th width="50%">检测范围</th>
+                    <th >操作</th>
+                    </thead>
+                    <tbody>
+                    <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+                            <td ><?php echo ($one["title"]); ?></td>
+                            <td>
+                                <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/addInspection');?>?id=<?php echo ($one["id"]); ?>" ><i class="glyphicon glyphicon-cog"></i>修改内容</a>
+                                <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" ><i class="glyphicon glyphicon-trash"></i>删除</a>
+                            </td>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
+                </table>
+                <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
+            </div><?php endif; ?>
     </div>
 </div>
+<script src="/Public/static/js/jquery.form.js"></script>
 <script type="text/javascript">
     $(function(){
         var de = $("#de_choose").val();
         $("li[name='de']").removeClass("active");
         $("#de_"+de).addClass("active");
     });
-    //设为首页左边展板
-    function doSpecial(id){
-        if(!id) return false;
-        $.ajax({
-            type:"post",
-            url:"<?php echo U('/admin/edit/doSpecial');?>",
-            data:{"id":id},
-            dataType:"json",
-            success:function(ret){
-                if(ret.msg=='succ'){
-                    var _options = {"text":"设置成功！","action":function(){window.location.reload();}};
+    function doAdd(){
+        var options = {
+            url: "<?php echo U('/admin/edit/saveInspection');?>",
+            dataType: 'json',
+            beforeSubmit: function(){
+                return true;
+            },
+            success: function (data) {
+                if(data.msg=='succ'){
+                    var _options = {"text":"保存成功！","action":function(){window.location.reload();}};
                     doAlertDialog(_options);
                 }else{
-                    var _options = {"text":"设置失败！"};
+                    var _options = {"text":"保存失败！"};
                     if(data.msg) _options.text = data.msg;
                     doAlertDialog(_options);
                 }
             }
-        });
+        };
+        $("#myform").ajaxForm(options);
+        return false;
     }
     //删除
     function onDelete(id){
@@ -358,7 +367,7 @@
         if(!id) return false;
         $.ajax({
             type:"post",
-            url:"<?php echo U('/admin/edit/doInfoDelete');?>",
+            url:"<?php echo U('/admin/edit/doInspDelete');?>",
             data:{"id":id},
             dataType:"json",
             success:function(ret){

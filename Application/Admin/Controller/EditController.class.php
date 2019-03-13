@@ -128,6 +128,35 @@ class EditController extends Controller {
         $this->assign($body);
         $this->display();
     }
+    //质检服务内容
+    public function inspection(){
+        $de=I('de','A');
+        if($de == 'A'){
+            $data = D("inspection_process")->find();
+            $body=array(
+                'one'=>$data,
+                'de'=>$de,
+            );
+        }elseif ($de == 'B'){
+            $page = I("p",'int');
+            $pagesize = 10;
+            if($page<=0) $page = 1;
+            $offset = ( $page-1 ) * $pagesize;
+            $data = D("inspection_scope")->limit("{$offset},{$pagesize}")->order('id desc')->select();
+            $count = D("inspection_scope")->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出
+            $body=array(
+                'list'=>$data,
+                'pagination'=>$pagination,
+                'de'=>$de,
+            );
+        }
+
+        $this->assign($body);
+        $this->display();
+    }
     //新闻中心内容
     public function news(){
         $admin_auth = session("admin_auth");//获取当前登录用户信息
@@ -293,6 +322,22 @@ class EditController extends Controller {
         $this->assign($body);
         $this->display();
     }
+    //检测范围新增
+    public function addInspection(){
+        $id = I('id');
+        if($id){
+            $check = D('inspection_scope')->where('id ='.$id)->find();
+            $check['content'] =htmlspecialchars($check['content']);
+            $body = array(
+                'one'=>$check,
+                'id'=>$id,
+            );
+            $this->assign($body);
+            $this->display();
+        }else{
+            $this->display();
+        }
+    }
     //保存信息
     public function saveInfo(){
         $de = I('type');
@@ -337,6 +382,7 @@ class EditController extends Controller {
         }
         $this->ajaxReturn($result);
     }
+
     public function saveInformationImage(){
         $imgurl = I("imgurl");
         //原图地址
@@ -369,34 +415,43 @@ class EditController extends Controller {
         }
         $this->ajaxReturn($rs);
     }
+    //检测范围删除
+    public function doInspDelete(){
+        $id =I("id",0,'intval');
+        $rs = array("msg"=>"fail");
+        if(D("inspection_scope")->where("id=".$id)->delete()){
+            $rs['msg'] = 'succ';
+        }
+        $this->ajaxReturn($rs);
+    }
 //联系我们信息修改
     public function contactus() {
-        $rs=D('contact')->find();
+        $rs=D('contact_us')->find();
         $this->assign($rs);
         $this->display();
     }
 
     public function saveContactInformation(){
-        $words1=I("words1");
-        $words2=I("words2");
-        $company_name=I("company_name");
-        $address=I('address');
-        $email=I("email");
-        $telephone=I('telephone');
+        $pc=I("postal_code");
+        $ad=I("address");
+        $ph=I("phonenumber");
+        $fax=I('fax');
+        $cp=I("consult_phone");
+        $email=I('email');
         $result = array("msg"=>"fail");
         $data =array(
-            'words1'=>$words1,
-            'words2'=>$words2,
-            'company_name'=>$company_name,
-            'address'=>$address,
-            'telephone'=>$telephone,
+            'postal_code'=>$pc,
+            'address'=>$ad,
+            'phonenumber'=>$ph,
+            'fax'=>$fax,
+            'consult_phone'=>$cp,
             'email'=>$email,
         );
-        $check = D('contact')->select();
+        $check = D('contact_us')->select();
 
         if($check){
             M()->startTrans();
-            if(D('contact')->where('id=1')->save($data)){
+            if(D('contact_us')->where('id=1')->save($data)){
                 $result['msg'] = 'succ';
                 M()->commit();
             }else{
@@ -405,7 +460,7 @@ class EditController extends Controller {
         }
         else{
             M()->startTrans();
-            if(D('contact')->add($data)){
+            if(D('contact_us')->add($data)){
                 $result['msg'] = 'succ';
                 M()->commit();
             }else{
@@ -606,32 +661,83 @@ class EditController extends Controller {
     public function aboutus(){
         $this->display();
     }
-    //关于我们信息保存
+    //中心概况保存
     public function saveIntroduction(){
         $result = array("msg"=>"fail");
         $content = $_POST["content"];
+        $type = I("type");
+        $where = "type = {$type}";
         $data = array(
             'content'=>$content,
-            'type'=>1,
+            'type'=>$type,
             'save_time'=>date("Y-m-d H:i:s"),
         );
-        $check = D('aboutus')->where("type = 1")->find();
+        $check = D('center_introduction')->where($where)->find();
         if($check){
-            if(D('aboutus')->where("type = 1")->save($data)){
+            if(D('center_introduction')->where("type = 1")->save($data)){
                 $result['msg'] = 'succ';
             }
         }
         else{
-            if(D('aboutus')->add($data)){
+            if(D('center_introduction')->add($data)){
                 $result['msg'] = 'succ';
             }
         }
         $this->ajaxReturn($result);
     }
+    //检测服务保存
+    public function saveInspection(){
+        $result = array("msg"=>"fail");
+        $content = $_POST["content"];
+        $de = I("de");
+        $id = I("id");
+        $where = "id = {$id}";
+        if($de == 'A'){
+            $data = array(
+                'content'=>$content,
+                'save_time'=>date("Y-m-d H:i:s"),
+            );
+            $check = D('inspection_process')->find();
+            if($check){
+                if(D('inspection_process')->where('id=1')->save($data)){
+                    $result['msg'] = 'succ';
+                }
+            }
+            else{
+                if(D('inspection_process')->add($data)){
+                    $result['msg'] = 'succ';
+                }
+            }
+            $this->ajaxReturn($result);
+        }elseif ($de == 'B'){
+            $title = I("title");
+            $data = array(
+                'content'=>$content,
+                'title'=>$title,
+                'save_time'=>date("Y-m-d H:i:s"),
+            );
+//            $check = D('inspection_scope')->where($where)->find();
+            if($id){
+                if(D('inspection_scope')->where($where)->save($data)){
+                    $result['msg'] = 'succ';
+                }
+            }
+            else{
+                if(D('inspection_scope')->add($data)){
+                    $result['msg'] = 'succ';
+                }
+            }
+            $this->ajaxReturn($result);
+        }
+    }
     public function introduction(){
-        $data = D('aboutus')->where("type = 1")->find();
+        $type = I("type");
+        $where = "type = {$type}";
+        $data = D('center_introduction')->where($where)->find();
+
         $body = array(
             'one'=>$data,
+            'type'=>$type,
         );
         $this->assign($body);
         $this->display();
