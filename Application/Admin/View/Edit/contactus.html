@@ -2,6 +2,11 @@
 <div id="page-wrapper">
     <include file="Common:breadcrumb" />
     <div id="page-inner" class="container">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/contactus" >检测流程</a></li>
+            <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/show.html?type=6" >顶部图片</a></li>
+            <input type="hidden" id="de_choose" value="{$de}"/>
+        </ul>
         <form class="form-horizontal" id="myform" action="" method="post">
             <div class="form-group">
                 <label class="col-sm-2 control-label talign-center fz13">备案号</label>
@@ -51,6 +56,11 @@
 <script src="__PUBLIC__/static/js/jquery.form.js"></script>
 <script src="__PUBLIC__/static/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
+    $(function(){
+        var de = $("#de_choose").val();
+        $("li[name='de']").removeClass("active");
+        $("#de_"+de).addClass("active");
+    });
     function onSave(){
         var options = {
             url: "{:U('/admin/edit/saveContactInformation')}",
