@@ -7,8 +7,8 @@
     <!--高德地图API-->
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=e6ae0ce52d025128d86829abd641f04b"></script>
     <link href="/Public/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Public/static/css/theme.css" rel="stylesheet">
     <link href="/Public/static/css/reset.css" rel="stylesheet">
+    <!-- <link href="/Public/static/css/theme.css" rel="stylesheet"> -->
 </head>
 <body>
 <header class="head-section" style="background-color: #1E50AE;">
@@ -31,7 +31,6 @@
                     <li class="dropdown">
                         <a href="/Home/Information/introduction" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">中心简介 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/introduction">中心概况</a></li>
                             <li><a href="/Home/Information/structure">机构设置</a></li>
                             <li><a href="/Home/Information/certificate">资质证书</a></li>
                         </ul>
@@ -66,10 +65,47 @@
 </header>
 
 
-<h2>资质证书</h2>
-<div>
-    <?php echo ($certi["content"]); ?>
-</div>
+    <div class="picContainer">
+        <img src="/Public/picture/about.png" alt="中心简介">
+        <a href="">资质证书</a>
+    </div>
+    <div class="contentWarp">
+        <div class="left-menu">
+            <ul>
+                <li><a href="">机构设置</a></li>
+                <li><a href="">资质证书</a></li>
+            </ul>
+        </div>
+        <div class="right-content">
+            <div class="breadcrumbs" style="margin-top: 0px;padding-top: 30px;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-8">
+                            <ol class="breadcrumb pull-left">
+                                <li>
+                                    <i class="glyphicon glyphicon-home"></i><a href="/home/Index/index">
+                                    主页
+                                </a>
+                                </li>
+                                <li>
+                                    <?php if($type == 1): ?><a href="/home/Information/information">
+                                        中心概况
+                                    </a>
+                                        <?php else: ?>
+                                        <a href="/home/Information/information#dynamic">
+                                            资质证书
+                                        </a><?php endif; ?>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>
+                资质证书图片            
+            </p>
+        </div>
+    </div>
 <div class="container" ><div class="hr"><span class="hr-inner"></span></div></div>
 <!--footer start-->
 <footer class="footer">
