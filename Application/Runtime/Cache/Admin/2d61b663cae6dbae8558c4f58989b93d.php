@@ -285,86 +285,73 @@
 </script>
     <div id="page-inner" class="container">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/contactus" >检测流程</a></li>
-            <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/show.html?type=6" >顶部图片</a></li>
+            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/fileDownload?de=A" >标准资料</a></li>
+            <li role="presentation" class="active" id="de_B" name="de"><a href="/admin/edit/fileDownload?de=B" >检测资料</a></li>
+            <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/show.html?type=5" >顶部图片</a></li>
             <input type="hidden" id="de_choose" value="<?php echo ($de); ?>"/>
         </ul>
-        <form class="form-horizontal" id="myform" action="" method="post">
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">备案号</label>
-                <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="postal_code" value="<?php echo ($postal_code); ?>">
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">地址</label>
-                <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="address" value="<?php echo ($address); ?>">
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">联系电话/传真</label>
-                <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="phonenumber" value="<?php echo ($phonenumber); ?>">
-                </div>
-                <div class="clearfix"></div>
-            </div>
+        <p></p>
+        <div>
 
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">真伪查询电话</label>
-                <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="consult_phone" value="<?php echo ($consult_phone); ?>">
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center fz13">邮箱</label>
-                <div class="col-sm-10">
-                    <input type="text" class="col-sm-10" name="email" value="<?php echo ($email); ?>">
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label talign-center">&nbsp;</label>
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-success" onclick="onSave()">保存修改</button>
-                </div>
-            </div>
-        </form>
+            <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addFile');?>?de=<?php echo ($de); ?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
+
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <th width="50%">
+                    <?php if($de == A): ?>标准资料名称<?php endif; ?>
+                    <?php if($de == B): ?>检测资料名称<?php endif; ?>
+                </th>
+                <th >操作</th>
+                </thead>
+                <tbody>
+                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+                        <td ><?php echo ($one["filename"]); ?></td>
+                        <td>
+                            <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/addFile');?>?id=<?php echo ($one["id"]); ?>" ><i class="glyphicon glyphicon-cog"></i>修改文件</a>
+                            <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" ><i class="glyphicon glyphicon-trash"></i>删除</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </tbody>
+            </table>
+            <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
+
+        </div>
     </div>
 </div>
-<script src="/Public/static/js/jquery.form.js"></script>
-<script src="/Public/static/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
     $(function(){
         var de = $("#de_choose").val();
         $("li[name='de']").removeClass("active");
         $("#de_"+de).addClass("active");
     });
-    function onSave(){
-        var options = {
-            url: "<?php echo U('/admin/edit/saveContactInformation');?>",
-            dataType: 'json',
-            beforeSubmit: function(){
-                return true;
-            },
-            success: function (data) {
-                if(data.msg=='succ'){
-                    var _options = {"text":"修改成功！","action":function(){window.location.reload();}};
+
+    //删除
+    function onDelete(id){
+        if(!id) return false;
+        var _options = {"flag":"error","text":"您确定要删除吗！","buttons":{"ok":{"action":function(){doneDel(id);}},"cancel":{}}};
+        doConfirmDialog(_options);
+    }
+    function doneDel(id){
+        if(!id) return false;
+        $.ajax({
+            type:"post",
+            url:"<?php echo U('/admin/edit/doFileDelete');?>",
+            data:{"id":id},
+            dataType:"json",
+            success:function(ret){
+                if(ret.msg=='succ'){
+                    var _options = {"text":"删除成功！","action":function(){window.location.reload();}};
                     doAlertDialog(_options);
                 }else{
-                    var _options = {"text":"修改失败！"};
+                    var _options = {"text":"删除失败！"};
                     if(data.msg) _options.text = data.msg;
                     doAlertDialog(_options);
                 }
             }
-        };
-        $("#myform").ajaxForm(options);
-        return false;
+        });
     }
-    </script>
+</script>
+
 	<footer>
 		
 	</footer>

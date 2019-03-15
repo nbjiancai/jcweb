@@ -794,4 +794,67 @@ class EditController extends Controller {
         }
         $this->ajaxReturn($rs);
     }
+    public function fileDownload(){
+        $admin_auth = session("admin_auth");//获取当前登录用户信息
+        $if_admin = $admin_auth['super_admin'];//是否是超级管理员
+        $user=$admin_auth['gid'];//判断是哪个角色
+        $de=I('de','A');
+
+        if($de == 'A'){
+            $type = 1;//标准资料
+        }else if($de = 'B'){
+            $type = 0;//检测资料
+        }
+
+        if($de =='A'){
+            $page = I("p",'int');
+            $pagesize = 10;
+            if($page<=0) $page = 1;
+            $offset = ( $page-1 ) * $pagesize;
+            $where="type = $type";
+            $result=D('file_download')->where($where)->limit("{$offset},{$pagesize}")->select();
+            $count = D("file_download")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出*
+        }elseif ($de =='B'){
+            $page2 = I("p2",'int');
+            $pagesize2 = 10;
+            if($page2<=0) $page2 = 1;
+            $offset2 = ( $page2-1 ) * $pagesize2;
+            $where="type = $type";
+            $result=D('file_download')->where($where)->limit("{$offset2},{$pagesize2}")->select();
+            $count = D("file_download")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize2);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出$Page
+        }
+        $body=array(
+            'de'=>$de,
+            'list'=>$result,
+            'pagination'=>$pagination,
+        );
+        $this->assign($body);
+        $this->display();
+    }
+
+    //添加文件
+    public function addFile(){
+        $de = I('de');
+        $id = I('id');
+        if($id){
+            $check = D('file_download')->where('id ='.$id)->find();
+            $body = array(
+                'one'=>$check,
+                'de'=>$de,
+                'id'=>$id,
+            );
+        }else{
+            $body = array(
+                'de'=>$de
+            );
+        }
+        $this->assign($body);
+        $this->display();
+    }
 }
