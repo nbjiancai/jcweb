@@ -41,7 +41,10 @@ h6 {
 a { color:#fff;  }
 a:hover { color: #000; }
 p { line-height: 22px }
-
+.container, .container-fluid{
+    width: 100%;
+    padding: 0 80px;
+}
 .head-section,
 .head-section .navbar-default{
     background-color: #1E50AE;
@@ -52,9 +55,6 @@ p { line-height: 22px }
 }
 .head-section .navbar{
     margin-bottom: 0;
-}
-.head-section .container-fluid{
-    padding: 0;
 }
 .head-section .nav .navbar-nav{
     height: 100px;
@@ -82,6 +82,30 @@ p { line-height: 22px }
     line-height: 100px;
     float: left;
 }
-.head-section .navbar-nav li{
+.head-section .nav .navbar-nav>li{
     margin-top: 25px;
+}
+.dropdown-menu{
+    background-color: #1E50AE;
+}
+.nav .navbar-nav a:hover a:active{
+    color: #000;
+}
+/* 内容区域 */
+#content-area{
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#content-area row .list-group>.list-group-title{
+    background-color: #1E50AE;
+    font-weight: bold;
+}
+.picContainer{
+    height: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.picContainer img{
+    height: 400px;
+    width: 100%;
 }

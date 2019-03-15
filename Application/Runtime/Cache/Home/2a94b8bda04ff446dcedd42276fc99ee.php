@@ -7,8 +7,8 @@
     <!--高德地图API-->
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=e6ae0ce52d025128d86829abd641f04b"></script>
     <link href="/Public/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Public/static/css/theme.css" rel="stylesheet">
     <link href="/Public/static/css/reset.css" rel="stylesheet">
+    <!-- <link href="/Public/static/css/theme.css" rel="stylesheet"> -->
 </head>
 <body>
 <header class="head-section" style="background-color: #1E50AE;">
@@ -31,7 +31,6 @@
                     <li class="dropdown">
                         <a href="/Home/Information/introduction" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">中心简介 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/introduction">中心概况</a></li>
                             <li><a href="/Home/Information/structure">机构设置</a></li>
                             <li><a href="/Home/Information/certificate">资质证书</a></li>
                         </ul>
@@ -112,11 +111,11 @@
 </div>
 
 <!-- 内容区域 -->
-<div class="container-fluid">
+<div class="container-fluid" id="content-area">
     <div class="row">
         <div class="col-xs-3 col-md-2">
             <ul class="list-group">
-                <li class="list-group-item">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
+                <li class="list-group-item list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
                 <li class="list-group-item">
                     <span>首届华东六省...</span>
                     <span>2019-03-12</span>
