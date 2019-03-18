@@ -287,20 +287,16 @@
         <div id="TCrop">
             <form class="form-horizontal" id="myform" action="" method="post">
                 <div class="form-group">
-                    <label class="col-sm-2 control-label talign-center fz13">照片</label>
+                    <label class="col-sm-2 control-label talign-center fz13">文件</label>
                     <div class="col-sm-10">
                         <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
-                            <?php if($type == I): ?><img src="<?php echo ($image['information_pic_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" />
-                                <?php else: ?>
-                                <img src="<?php echo ($image['thumb_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" /><?php endif; ?>
+                            <p>点击选取文件</p>
+                            <p class="help-block" id="attachment2"></p>
                         </div>
-                        <?php if($type == I ): ?><input type="hidden" name="information_pic_path" value="<?php echo ($image['information_pic_path']); ?>" />
-                            <input type="hidden" name="pic_path" value="<?php echo ($image['pic_path']); ?>" />
-                            <?php else: ?>
-                            <input type="hidden" name="imgurl" value="<?php echo ($image['thumb_path']); ?>" /><?php endif; ?>
-
+                        <div>文件名称：<input type="text" name="filename" value="<?php echo ($one['filename']); ?>"/></div>
+                        <input type="hidden" name="save_path" value="<?php echo ($one['save_path']); ?>" />
                         <input type="hidden" name="id" value="<?php echo ($id); ?>"/>
-                        <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
+                        <input type="hidden" name="de" value="<?php echo ($de); ?>"/>
                         <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" style="display:none;"  />
                     </div>
                     <div class="clearfix"></div>
@@ -324,7 +320,7 @@
         var file = $("#addfile").val();
         if(file){
             $.ajaxFileUpload({
-                url: "<?php echo U('Uploader/start');?>",
+                url: "<?php echo U('Uploader/dataUpload');?>",
                 secureuri: false,
                 fileElementId: 'addfile',
                 dataType: 'JSON',
@@ -333,9 +329,9 @@
                     $("#addfile").val("");
                     //alert(ret.url);
                     if(ret.info=='succ'){
-                        $("input[name='information_pic_path']").val(ret.information_pic_path);
-                        $("input[name='pic_path']").val(ret.pic_path);
-                        $("#attachment img").attr("src",ret.information_pic_path);
+                        $("input[name='save_path']").val(ret.save_path);
+                        $("#attachment2").html(ret.save_path);
+                        // $("#attachment img").attr("src",ret.information_pic_path);
                     }else{
                         var _options = {"text":"上传失败","flag":"error"};
                         if(ret.info) _options.text = ret.info;
@@ -357,7 +353,7 @@
 
     function onSave(){
         var options = {
-            url: "<?php echo U('/admin/edit/saveInfoImage');?>",
+            url: "<?php echo U('/admin/edit/saveFile');?>",
             dataType: 'json',
             beforeSubmit: function(){
                 return true;

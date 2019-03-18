@@ -8,15 +8,13 @@
                     <label class="col-sm-2 control-label talign-center fz13">文件</label>
                     <div class="col-sm-10">
                         <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
-                            <if condition="$type eq I">
-                                <img src="{$image['information_pic_path']}" onerror="this.src='__PUBLIC__/static/images/default-timg.gif'" style="height: 100%;" />
-                                <else/>
-                                <img src="{$image['thumb_path']}" onerror="this.src='__PUBLIC__/static/images/default-timg.gif'" style="height: 100%;" />
-                            </if>
+                            <p>点击选取文件</p>
+                            <p class="help-block" id="attachment2"></p>
                         </div>
-                        <input type="hidden" name="imgurl" value="{$image['thumb_path']}" />
+                        <div>文件名称：<input type="text" name="filename" value="{$one['filename']}"/></div>
+                        <input type="hidden" name="save_path" value="{$one['save_path']}" />
                         <input type="hidden" name="id" value="{$id}"/>
-                        <input type="hidden" name="type" value="{$type}"/>
+                        <input type="hidden" name="de" value="{$de}"/>
                         <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" style="display:none;"  />
                     </div>
                     <div class="clearfix"></div>
@@ -40,7 +38,7 @@
         var file = $("#addfile").val();
         if(file){
             $.ajaxFileUpload({
-                url: "{:U('Uploader/start')}",
+                url: "{:U('Uploader/dataUpload')}",
                 secureuri: false,
                 fileElementId: 'addfile',
                 dataType: 'JSON',
@@ -49,9 +47,9 @@
                     $("#addfile").val("");
                     //alert(ret.url);
                     if(ret.info=='succ'){
-                        $("input[name='information_pic_path']").val(ret.information_pic_path);
-                        $("input[name='pic_path']").val(ret.pic_path);
-                        $("#attachment img").attr("src",ret.information_pic_path);
+                        $("input[name='save_path']").val(ret.save_path);
+                        $("#attachment2").html(ret.save_path);
+                        // $("#attachment img").attr("src",ret.information_pic_path);
                     }else{
                         var _options = {"text":"上传失败","flag":"error"};
                         if(ret.info) _options.text = ret.info;
@@ -73,7 +71,7 @@
 
     function onSave(){
         var options = {
-            url: "{:U('/admin/edit/saveInfoImage')}",
+            url: "{:U('/admin/edit/saveFile')}",
             dataType: 'json',
             beforeSubmit: function(){
                 return true;

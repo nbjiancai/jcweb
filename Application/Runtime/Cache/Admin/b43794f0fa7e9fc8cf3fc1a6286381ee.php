@@ -285,7 +285,7 @@
 </script>
     <div id="page-inner" class="container">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/contactus" >检测流程</a></li>
+            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/contactus" >联系我们</a></li>
             <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/show.html?type=6" >顶部图片</a></li>
             <input type="hidden" id="de_choose" value="<?php echo ($de); ?>"/>
         </ul>

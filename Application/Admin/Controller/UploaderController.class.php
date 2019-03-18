@@ -260,5 +260,31 @@ class UploaderController extends Controller {
 
         }
     }
-
+    /**
+     * [upload_img 文件上传]
+     * @return [type] [description]
+     */
+    public function dataUpload($return=false){
+        $upload = new \Think\Upload();
+        $upload->maxSize   =     0 ;
+        $upload->exts      =     array('pdf', 'pptx', 'ppt', 'doc','docx');
+        $upload->rootPath  =     './Public/file/data/'; // 设置附件上传根目录
+        $upload->savePath  =     '';
+        $upload->saveName = 'time';
+        $info   =   $upload->upload();
+        if(!$info) {// 上传错误提示错误信息
+            $array['info'] = $upload->getError();
+        }else{// 上传成功 获取上传文件信息
+            $saveUrl = './Public/file/data/'.$info['file']['savepath'].$info['file']['savename'];
+            $array = array(
+                'info'=>'succ',
+                'save_path'=>substr($saveUrl, 1),
+            );
+            if($return){
+                return $array;
+            }else{
+                echo json_encode($array);
+            }
+        }
+    }
 }

@@ -857,4 +857,113 @@ class EditController extends Controller {
         $this->assign($body);
         $this->display();
     }
+    //保存文件
+    public function SaveFile(){
+        $id = I('id');
+        $de = I('de');
+        $filename = I('filename');
+        $de == 'A' && $type= '1';
+        $de == 'B' && $type= '0';
+        $save_path = I('save_path');
+        if(empty($save_path)){
+            $rs['msg'] = "无效的提交";
+            $this ->ajaxReturn($rs);
+        }
+        if(empty($id)){
+            $data = array(
+                'save_path'=>$save_path,
+                'type'=>$type,
+                'filename'=>$filename,
+                'save_time'=>date("Y-m-d H:i:s"),
+            );
+            if(D('file_download')->add($data)){
+                $rs['msg'] = "succ";
+                $this->ajaxReturn($rs);
+            }else{
+                $rs['msg'] = "添加失败";
+                $this->ajaxReturn($rs);
+            }
+        }else{
+            $data = array(
+                'save_path'=>$save_path,
+                'type'=>$type,
+                'filename'=>$filename,
+                'save_time'=>date("Y-m-d H:i:s"),
+            );
+            $where = "type={$type}";
+            if(D('file_download')->where($where)->save($data)){
+                $rs['msg'] = "succ";
+                $this->ajaxReturn($rs);
+            }else{
+                $rs['msg'] = "保存失败";
+                $this->ajaxReturn($rs);
+            }
+        }
+    }
+    //照片删除
+    public function doFileDelete(){
+        $id =I("id",0,'intval');
+        $rs = array("msg"=>"fail");
+        if(D("file_download")->where("id=".$id)->delete()){
+            $rs['msg'] = 'succ';
+        }
+        $this->ajaxReturn($rs);
+    }
+
+    public function standardized(){
+        $admin_auth = session("admin_auth");//获取当前登录用户信息
+        $if_admin = $admin_auth['super_admin'];//是否是超级管理员
+        $user=$admin_auth['gid'];//判断是哪个角色
+        $de=I('de','A');
+
+        if($de == 'A'){
+            $type = 0;//标准立项
+        }else if($de = 'B'){
+            $type = 1;//标准发布
+        }else if($de = 'C'){
+            $type = 2;//标准动态
+        }
+
+        if($de =='A'){
+            $page = I("p",'int');
+            $pagesize = 10;
+            if($page<=0) $page = 1;
+            $offset = ( $page-1 ) * $pagesize;
+            $where="type = $type";
+            $result=D('news')->where($where)->limit("{$offset},{$pagesize}")->select();
+            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出*
+        }elseif ($de =='B'){
+            $page2 = I("p2",'int');
+            $pagesize2 = 10;
+            if($page2<=0) $page2 = 1;
+            $offset2 = ( $page2-1 ) * $pagesize2;
+            $where="type = $type";
+            $result=D('news')->where($where)->limit("{$offset2},{$pagesize2}")->select();
+            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize2);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出$Page
+        }elseif ($de =='C'){
+            $page3 = I("p3",'int');
+            $pagesize3 = 10;
+            if($page3<=0) $page3 = 1;
+            $offset3 = ( $page3-1 ) * $pagesize3;
+            $where="type = $type";
+            $result=D('news')->where($where)->limit("{$offset3},{$pagesize3}")->select();
+            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page       = new \Think\Page($count,$pagesize3);
+            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination       = $Page->show();// 分页显示输出$Page
+        $body=array(
+            'de'=>$de,
+            'list'=>$result,
+            'pagination'=>$pagination,
+        );
+        $this->assign($body);
+        $this->display();
+        }
+    }
 }
