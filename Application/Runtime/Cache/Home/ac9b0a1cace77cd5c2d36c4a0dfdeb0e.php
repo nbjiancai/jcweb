@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">建筑材料干混砂浆产品质量监督检验测试中心</a>
+                <a class="navbar-brand" href="/Home/index">建筑材料干混砂浆产品质量监督检验测试中心</a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,7 +57,7 @@
                                 <li><a href="/Home/Information/file#standard">标准资料</a></li>
                             </ul>
                     </li>
-                    <li><a href="/Home/Information/contact">联系我们</a></li>
+                    <li id="contact-us"><a href="/Home/Information/contact">联系我们</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->

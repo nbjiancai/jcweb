@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">建筑材料干混砂浆产品质量监督检验测试中心</a>
+                <a class="navbar-brand" href="/Home/index">建筑材料干混砂浆产品质量监督检验测试中心</a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,7 +57,7 @@
                                 <li><a href="/Home/Information/file#standard">标准资料</a></li>
                             </ul>
                     </li>
-                    <li><a href="/Home/Information/contact">联系我们</a></li>
+                    <li id="contact-us"><a href="/Home/Information/contact">联系我们</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -113,50 +113,66 @@
 <!-- 内容区域 -->
 <div class="container-fluid" id="content-area">
     <div class="row">
-        <div class="col-xs-3 col-md-2">
+        <div class="col-xs-3 col-md-2" id="download-left">
             <ul class="list-group">
                 <li class="list-group-item list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
               </ul>
               <ul class="list-group">
-                <li class="list-group-item">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
+                <li class="list-group-item list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
                 <li class="list-group-item">
-                    <span>首届华东六省...</span>
-                    <span>2019-03-12</span>
+                    <a href="">
+                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                        <span class="list-left-date">2019-03-12</span>
+                    </a>
                 </li>
               </ul>
         </div>
-        <div class="col-xs-6 col-md-8">
-            <div>
+        <div class="col-xs-6 col-md-8" id="information-news">
+            <div class="infomation-title">
                 <span class="glyphicon glyphicon-leaf"></span>
-                <span>中心简介</span>
+                <span class="infomation-title-text">中心简介</span>
             </div>
             <hr />
             <div class="row">
@@ -195,84 +211,114 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-8 col-md-8">
+                <div class="col-xs-8 col-md-8" id="information-news-details">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="">2019-03-12</span>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="">
+                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="">2019-03-12</span>
+                            </a>
                         </li>
                       </ul>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-6 col-mdd-6">
-                    <div>
+            <div class="row" id="center-content">
+                <div class="col-xs-6 col-md-6">
+                    <div class="infomation-title">
                         <span class="glyphicon glyphicon-leaf"></span>
-                        <span>新闻中心</span>
+                        <span class="infomation-title-text">新闻中心</span>
                     </div>
                     <hr />
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                       </ul>
                 </div>
-                <div class="col-xs-6 col-mdd-6">
-                    <div>
+                <div class="col-xs-6 col-md-6">
+                    <div class="infomation-title">
                         <span class="glyphicon glyphicon-leaf"></span>
-                        <span>质检服务</span>
+                        <span class="infomation-title-text">质检服务</span>
                     </div>
                     <hr />
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                         <li class="list-group-item">
-                            <span>首届华东六省...</span>
-                            <span>2019-03-12</span>
+                            <a href="">
+                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                                <span class="list-left-date">2019-03-12</span>
+                            </a>
                         </li>
                       </ul>
                 </div>
             </div>
         </div>
         <div class="col-xs-3 col-md-2">
-            <div>
+            <div class="infomation-title">
                 <span class="glyphicon glyphicon-leaf"></span>
-                <span>质检服务</span>
+                <span class="infomation-title-text">质检服务</span>
             </div>
             <hr />
             <form role="form">
@@ -293,12 +339,12 @@
     </div>
 </div>
 <!-- 实验室风采 -->
-<div class="container-fluid">
+<div class="container-fluid" id="lab-sence">
     <div class="row">
         <div class="col-xs-12 col-md-12">
-            <div>
+            <div class="infomation-title">
                 <span class="glyphicon glyphicon-leaf"></span>
-                <span>实验室风采</span>
+                <span class="infomation-title-text">实验室风采</span>
             </div>
             <hr />
             <div class="row">
@@ -359,13 +405,13 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="address wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+      <div>
         <address>
-          <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".1s">
+          <div class="col-sm-4 col-md-4">
             <p><i class="fa fa-home pr-10"></i>地址: <?php echo ($rs["address"]); ?></p></div>
-          <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
+          <div class="col-sm-4 col-md-4">
             <p><i class="fa fa-mobile pr-10"></i>联系电话 : <?php echo ($rs["telephone"]); ?> </p></div>
-          <div class="col-md-4 col-sm-4 wow fadeInUp" data-wow-duration="2s" data-wow-delay=".7s">
+          <div class="col-sm-4 col-md-4">
             <p><i class="fa fa-envelope pr-10"></i> Email : <?php echo ($rs["email"]); ?></p></div>
         </address>
       </div>
@@ -380,7 +426,7 @@
             <div class="copyright"> <p>Copyright © 2013-2018 BUPT All Rights Reserved. 备案号：闽ICP备15012807号-1</p>
             </div>
         </div>
-    </div>
+      </div>
     </div>
   </div>
 </footer>
