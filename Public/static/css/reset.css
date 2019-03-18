@@ -41,6 +41,9 @@ h6 {
 a { color:#fff;  }
 a:hover { color: #000; }
 p { line-height: 22px }
+hr{
+    margin-top: 10px;
+}
 .container, .container-fluid{
     width: 100%;
     padding: 0 80px;
@@ -82,23 +85,98 @@ p { line-height: 22px }
     line-height: 100px;
     float: left;
 }
-.head-section .nav .navbar-nav>li{
+.head-section .navbar .navbar-nav .dropdown, #contact-us{
     margin-top: 25px;
 }
 .dropdown-menu{
     background-color: #1E50AE;
 }
-.nav .navbar-nav a:hover a:active{
-    color: #000;
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+    background-color: #337ab7;
+    color: #fff;
+}
+.head-section .dropdown-menu>li>a{
+   
+}
+.head-section .dropdown-menu>li>a:hover{
+    background-color: #337ab7;
 }
 /* 内容区域 */
-#content-area{
-    padding-left: 50px;
-    padding-right: 50px;
+#content-area .row{
+    margin-top: 10px;
 }
-#content-area row .list-group>.list-group-title{
+#content-area .row .list-group .list-group-title{
+    color: #fff;
     background-color: #1E50AE;
+    font-size: 18px;
     font-weight: bold;
+}
+#content-area .row .list-group .list-group-title .glyphicon-chevron-right{
+    float: right;
+    vertical-align: middle;
+}
+#content-area .row #download-left .list-group a{
+    color: #000;
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+#content-area #information-news #center-content .list-group .list-group-item a{
+    color: #000;
+    display: inline-block;
+    width: 100%;
+}
+#content-area .row .list-group a .list-left-title{
+    float: left;
+    width: 150px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#content-area .row .list-group a .list-left-date{
+    float: right;
+    
+}
+#content-area #information-news #information-news-details .list-group .list-group-item a{
+    color: #000;
+    display: inline-block;
+    width: 100%;
+}
+#information-news-details .list-group .list-group-item a .list-left-title{
+    float: left;
+    width: 80%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#information-news-details .list-group .list-group-item a .list-left-date{
+    float: right;
+}
+#content-area .infomation-title,
+#lab-sence .infomation-title{
+    width: 100%;
+    font-size: 24px;
+    vertical-align: middle;
+}
+#content-area .infomation-title .glyphicon-leaf,
+#lab-sence .infomation-title .glyphicon-leaf
+{
+    color: #1E50AE;
+}
+#content-area .infomation-title .infomation-title-text,
+#lab-sence .infomation-title .infomation-title-text{
+    color: #000;
+}
+#content-area #carousel-introduce .carousel-inner>.item>img{
+    width: 100%;
+}
+#content-area #carousel-introduce,
+#content-area #carousel-introduce .carousel-inner,
+#content-area #carousel-introduce .carousel-inner .item,
+#content-area #carousel-introduce .carousel-inner .item img
+{
+    height: 205px;;
 }
 .picContainer{
     height: 400px;
@@ -108,4 +186,9 @@ p { line-height: 22px }
 .picContainer img{
     height: 400px;
     width: 100%;
+}
+
+/* footer */
+footer{
+    background-color: #000;
 }

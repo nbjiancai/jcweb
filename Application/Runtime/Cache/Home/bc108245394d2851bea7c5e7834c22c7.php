@@ -7,8 +7,8 @@
     <!--高德地图API-->
     <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.12&key=e6ae0ce52d025128d86829abd641f04b"></script>
     <link href="/Public/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/Public/static/css/theme.css" rel="stylesheet">
     <link href="/Public/static/css/reset.css" rel="stylesheet">
+    <!-- <link href="/Public/static/css/theme.css" rel="stylesheet"> -->
 </head>
 <body>
 <header class="head-section" style="background-color: #1E50AE;">
@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">建筑材料干混砂浆产品质量监督检验测试中心</a>
+                <a class="navbar-brand" href="/Home/index">建筑材料干混砂浆产品质量监督检验测试中心</a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,7 +31,6 @@
                     <li class="dropdown">
                         <a href="/Home/Information/introduction" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">中心简介 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/introduction">中心概况</a></li>
                             <li><a href="/Home/Information/structure">机构设置</a></li>
                             <li><a href="/Home/Information/certificate">资质证书</a></li>
                         </ul>
@@ -58,7 +57,7 @@
                                 <li><a href="/Home/Information/file#standard">标准资料</a></li>
                             </ul>
                     </li>
-                    <li><a href="/Home/Information/contact">联系我们</a></li>
+                    <li id="contact-us"><a href="/Home/Information/contact">联系我们</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
