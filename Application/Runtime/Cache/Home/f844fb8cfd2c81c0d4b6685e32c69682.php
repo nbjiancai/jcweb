@@ -39,7 +39,7 @@
                     <li class="dropdown">
                         <a href="/Home/Information/news" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/news">通知公告</a></li>
+                            <li><a href="/Home/Information/notice">通知公告</a></li>
                             <li><a href="/Home/Information/news#industry">行业新闻</a></li>
                         </ul>
                     </li>
@@ -74,7 +74,7 @@
         <div class="row">
             <div class="col-xs-2 col-md-2 left-menu">
                 <ul>
-                    <li><a href="/Home/Information/news">通知公告</a></li>
+                    <li><a href="/Home/Information/basic">通知公告</a></li>
                     <li><a href="/Home/Information/structure">行业新闻</a></li>
                     <li><a href="/Home/Information/certificate">政策法规</a></li>
                 </ul>
@@ -105,17 +105,15 @@
                 <div class="row" id="right-content-details">
                     <div class="col-xs-12 col-md-12">
                         <ul class="media-list" id="notice-list">
-                            <?php if(is_array($notice)): ${i} = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = (${i} % 2 );++${i};?><li class="media">
+                            <?php if(is_array($notice)): $i = 0; $__LIST__ = $notice;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class="media">
                                     <div class="media-left">
                                         <a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($vo['id']); ?>">
-                                            <img class="media-object" src='/Public/picture/number-<?php echo ($i); ?>.png' alt="...">
+                                            <img class="media-object" src="/Public/picture/number-1.png" alt="...">
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        <a href="<?php echo U('/home/Information/newDetail');?>?type=1&id=<?php echo ($vo['id']); ?>" style="color: #000;">
-                                            <h4 class="media-heading"><?php echo ($vo["title"]); ?></h4>
-                                        </a>
-                                        <span>发布：<?php echo ($vo["save_time"]); ?></span>
+                                        <h4 class="media-heading">关于《机械喷涂砂浆成套设备》团体标准 项目立项的通知</h4>
+                                        <span>发布：2018/12/12 浏览：212</span>
                                     </div>
                                 </li><?php endforeach; endif; else: echo "" ;endif; ?>
                             
