@@ -284,95 +284,99 @@
         });
 </script>
     <div id="page-inner" class="container">
-        <div id="TCrop">
-            <form class="form-horizontal" id="myform" action="" method="post">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label talign-center fz13">照片</label>
-                    <div class="col-sm-10">
-                        <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
-                            <img src="<?php echo ($image['information_pic_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" />
-                        </div>
-                        <input type="hidden" name="information_pic_path" value="<?php echo ($image['information_pic_path']); ?>" />
-                        <input type="hidden" name="pic_path" value="<?php echo ($image['pic_path']); ?>" />
-                        <input type="hidden" name="id" value="<?php echo ($id); ?>"/>
-                        <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
-                        <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" style="display:none;"  />
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label talign-center">&nbsp;</label>
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-success" onclick="onSave()">保 存</button>
-                        <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
-                        <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
-                    </div>
-                </div>
-            </form>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/standardized?de=A" >标准立项</a></li>
+            <li role="presentation" class="active" id="de_B" name="de"><a href="/admin/edit/standardized?de=B" >标准发布</a></li>
+            <li role="presentation" class="active" id="de_C" name="de"><a href="/admin/edit/standardized?de=C" >标准动态</a></li>
+            <li role="presentation" class="active" id="de_D" name="de"><a href="/admin/edit/show.html?type=4" >顶部图片</a></li>
+            <input type="hidden" id="de_choose" value="<?php echo ($de); ?>"/>
+        </ul>
+        <p></p>
+        <div>
+
+            <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addStandardized');?>?de=<?php echo ($de); ?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
+
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                <th width="15%">展示图</th>
+                <th width="50%">
+                    <?php if($de == A): ?>标注立项标题<?php endif; ?>
+                    <?php if($de == B): ?>标准发布标题<?php endif; ?>
+                    <?php if($de == C): ?>标准动态标题<?php endif; ?>
+                </th>
+                <th >操作</th>
+                </thead>
+                <tbody>
+                <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+                        <td ><img src="<?php echo ($one["information_pic_path"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="width: 90px;"></td>
+                        <td ><?php echo ($one["title"]); ?></td>
+                        <td>
+                            <?php if($one['if_special'] == 0): ?><a class="btn btn-info btn-xs" href="javascript:void(0);" onclick="doSpecial('<?php echo ($one["id"]); ?>')"><i class="glyphicon glyphicon-cog"></i>设为展板</a><?php endif; ?>
+                            <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/informationPicture');?>?id=<?php echo ($one["id"]); ?>&type=P" ><i class="glyphicon glyphicon-picture"></i>插入/更换产品图片</a>
+                            <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/addStandardized');?>?id=<?php echo ($one["id"]); ?>" ><i class="glyphicon glyphicon-cog"></i>修改内容</a>
+                            <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" ><i class="glyphicon glyphicon-trash"></i>删除</a>
+                        </td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                </tbody>
+            </table>
+            <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
+
         </div>
     </div>
 </div>
-<script src="/Public/static/js/jquery.form.js"></script>
-<script src="/Public/static/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
-    function ajaxFileUpload(){
-        var file = $("#addfile").val();
-        if(file){
-            $.ajaxFileUpload({
-                url: "<?php echo U('Uploader/start');?>",
-                secureuri: false,
-                fileElementId: 'addfile',
-                dataType: 'JSON',
-                success: function (data, status) {
-                    var ret = JSON.parse(data);
-                    $("#addfile").val("");
-                    //alert(ret.url);
-                    if(ret.info=='succ'){
-                        $("input[name='information_pic_path']").val(ret.information_pic_path);
-                        $("input[name='pic_path']").val(ret.pic_path);
-                        $("#attachment img").attr("src",ret.information_pic_path);
-                    }else{
-                        var _options = {"text":"上传失败","flag":"error"};
-                        if(ret.info) _options.text = ret.info;
-                        doAlertDialog(_options);
-                    }
-                },
-                error: function (data, status, e){
-                    var _options = {"text":"上传失败","flag":"error"};
-                    doAlertDialog(_options);
-                }
-            });
-        }
-        return false;
-    }
-    function onFileUpload() {
-        $('#addfile').click();
-        return false;
-    }
-
-    function onSave(){
-        var options = {
-            url: "<?php echo U('/admin/edit/saveInfoImage');?>",
-            dataType: 'json',
-            beforeSubmit: function(){
-                return true;
-            },
-            success: function (data) {
-                if(data.msg=='succ'){
-                    var _options = {"text":"上传成功！","action":function(){window.location.reload();}};
+    $(function(){
+        var de = $("#de_choose").val();
+        $("li[name='de']").removeClass("active");
+        $("#de_"+de).addClass("active");
+    });
+    //设为首页左边展板
+    function doSpecial(id){
+        if(!id) return false;
+        $.ajax({
+            type:"post",
+            url:"<?php echo U('/admin/edit/doSpecial2');?>",
+            data:{"id":id},
+            dataType:"json",
+            success:function(ret){
+                if(ret.msg=='succ'){
+                    var _options = {"text":"设置成功！","action":function(){window.location.reload();}};
                     doAlertDialog(_options);
                 }else{
-                    var _options = {"text":"上传失败！"};
+                    var _options = {"text":"设置失败！"};
                     if(data.msg) _options.text = data.msg;
                     doAlertDialog(_options);
                 }
             }
-        };
-        $("#myform").ajaxForm(options);
-        return false;
+        });
     }
-
+    //删除
+    function onDelete(id){
+        if(!id) return false;
+        var _options = {"flag":"error","text":"您确定要删除吗！","buttons":{"ok":{"action":function(){doneDel(id);}},"cancel":{}}};
+        doConfirmDialog(_options);
+    }
+    function doneDel(id){
+        if(!id) return false;
+        $.ajax({
+            type:"post",
+            url:"<?php echo U('/admin/edit/doStandardDelete');?>",
+            data:{"id":id},
+            dataType:"json",
+            success:function(ret){
+                if(ret.msg=='succ'){
+                    var _options = {"text":"删除成功！","action":function(){window.location.reload();}};
+                    doAlertDialog(_options);
+                }else{
+                    var _options = {"text":"删除失败！"};
+                    if(data.msg) _options.text = data.msg;
+                    doAlertDialog(_options);
+                }
+            }
+        });
+    }
 </script>
+
 	<footer>
 		
 	</footer>

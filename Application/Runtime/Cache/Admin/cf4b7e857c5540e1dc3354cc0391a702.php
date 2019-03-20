@@ -284,85 +284,48 @@
         });
 </script>
     <div id="page-inner" class="container">
-        <div id="TCrop">
-            <form class="form-horizontal" id="myform" action="" method="post">
-                <div class="form-group">
-                    <label class="col-sm-2 control-label talign-center fz13">照片</label>
-                    <div class="col-sm-10">
-                        <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
-                            <img src="<?php echo ($image['information_pic_path']); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="height: 100%;" />
-                        </div>
-                        <input type="hidden" name="information_pic_path" value="<?php echo ($image['information_pic_path']); ?>" />
-                        <input type="hidden" name="pic_path" value="<?php echo ($image['pic_path']); ?>" />
-                        <input type="hidden" name="id" value="<?php echo ($id); ?>"/>
-                        <input type="hidden" name="type" value="<?php echo ($type); ?>"/>
-                        <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" style="display:none;"  />
-                    </div>
-                    <div class="clearfix"></div>
+        <form class="form-horizontal" id="myform" action="" method="post">
+            <div class="form-group">
+                <label class="col-sm-1 control-label talign-center fz13"></label>
+                <div class="col-sm-11">
+                    <button type="submit" class="btn btn-success " onclick="doAdd()">保存</button>
                 </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label talign-center">&nbsp;</label>
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-success" onclick="onSave()">保 存</button>
-                        <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
-                        <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
-                    </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label talign-center fz13">标题</label>
+                <div class="col-sm-11">
+                    <input type="text" name="title" class="col-sm-8" value="<?php echo ($one["title"]); ?>">
+                    <input type="hidden" name="type" value="<?php echo ($de); ?>"/>
+                    <input type="hidden" name="id" value="<?php echo ($one["id"]); ?>"/>
                 </div>
-            </form>
-        </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-1 control-label talign-center fz13">内容</label>
+                <div class="col-sm-11">
+                    <textarea id="content" name="content" ><?php echo ($one["content"]); ?></textarea>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </form>
     </div>
 </div>
 <script src="/Public/static/js/jquery.form.js"></script>
-<script src="/Public/static/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
-    function ajaxFileUpload(){
-        var file = $("#addfile").val();
-        if(file){
-            $.ajaxFileUpload({
-                url: "<?php echo U('Uploader/start');?>",
-                secureuri: false,
-                fileElementId: 'addfile',
-                dataType: 'JSON',
-                success: function (data, status) {
-                    var ret = JSON.parse(data);
-                    $("#addfile").val("");
-                    //alert(ret.url);
-                    if(ret.info=='succ'){
-                        $("input[name='information_pic_path']").val(ret.information_pic_path);
-                        $("input[name='pic_path']").val(ret.pic_path);
-                        $("#attachment img").attr("src",ret.information_pic_path);
-                    }else{
-                        var _options = {"text":"上传失败","flag":"error"};
-                        if(ret.info) _options.text = ret.info;
-                        doAlertDialog(_options);
-                    }
-                },
-                error: function (data, status, e){
-                    var _options = {"text":"上传失败","flag":"error"};
-                    doAlertDialog(_options);
-                }
-            });
-        }
-        return false;
-    }
-    function onFileUpload() {
-        $('#addfile').click();
-        return false;
-    }
-
-    function onSave(){
+    function doAdd(){
         var options = {
-            url: "<?php echo U('/admin/edit/saveInfoImage');?>",
+            url: "<?php echo U('/admin/edit/saveStandard');?>",
             dataType: 'json',
             beforeSubmit: function(){
                 return true;
             },
             success: function (data) {
                 if(data.msg=='succ'){
-                    var _options = {"text":"上传成功！","action":function(){window.location.reload();}};
+                    var _options = {"text":"保存成功！","action":function(){window.location.reload();}};
                     doAlertDialog(_options);
                 }else{
-                    var _options = {"text":"上传失败！"};
+                    var _options = {"text":"保存失败！"};
                     if(data.msg) _options.text = data.msg;
                     doAlertDialog(_options);
                 }
@@ -371,7 +334,6 @@
         $("#myform").ajaxForm(options);
         return false;
     }
-
 </script>
 	<footer>
 		

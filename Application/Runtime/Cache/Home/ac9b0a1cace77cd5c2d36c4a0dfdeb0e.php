@@ -66,17 +66,50 @@
 </header>
 
 
-<div>
-    <h2>联系我们</h2>
-    <div>
-        <text>postal_code:</text><text><?php echo ($contact["postal_code"]); ?></text><br/>
-        <text>address:</text><text><?php echo ($contact["address"]); ?></text><br/>
-        <text>phone_number:</text><text><?php echo ($contact["phonenumber"]); ?></text><br/>
-        <text>consult_phone:</text><text><?php echo ($contact["consult_phone"]); ?></text><br/>
-        <text>email:</text><text><?php echo ($contact["email"]); ?></text><br/>
+    <div class="picContainer">
+        <img src="/Public/picture/about.png" alt="中心简介">
+        <a id="fix-title" href="">中心简介</a>
     </div>
-</div>
-<div id="container"></div>
+    <div class="container-two" id="container-content">
+        <div class="row">
+            <div class="col-xs-2 col-md-2 left-menu">
+                <ul>
+                    <li><a href="/Home/Information/basic">中心概况</a></li>
+                    <li><a href="/Home/Information/structure">机构设置</a></li>
+                    <li><a href="/Home/Information/certificate">资质证书</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-10 col-md-10 right-content">
+                <div class="breadcrumbs">
+                    <div class="row">
+                        <div class="col-lg-8 col-sm-8">
+                            <ol class="breadcrumb pull-left">
+                                <li>
+                                    <i class="glyphicon glyphicon-home"></i><a href="/home/Index/index">
+                                    主页
+                                </a>
+                                </li>
+                                <li>
+                                    <?php if($type == 1): ?><a href="/home/Information/information">
+                                        中心简介
+                                    </a>
+                                        <?php else: ?>
+                                        <a href="/home/Information/information#dynamic">
+                                            机构设置
+                                        </a><?php endif; ?>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="right-content-details">
+                    <div class="col-xs-12 col-md-12">
+                        <img src="/Public/picture/structure.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="container" ><div class="hr"><span class="hr-inner"></span></div></div>
 <!--footer start-->
 <footer class="footer">

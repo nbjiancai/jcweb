@@ -248,7 +248,7 @@ class EditController extends Controller {
             $image = D('news')->where("id = ".$id)->find();
         }
        elseif($type == 'P'){
-           $image = D('production')->where("id = ".$id)->find();
+           $image = D('standard')->where("id = ".$id)->find();
        }
         $body = array(
            'id'=>$id,
@@ -277,7 +277,7 @@ class EditController extends Controller {
         if($type == 'I'){
             $data = array(
                 'information_pic_path'=>$thumb,
-                'pic_path'=>$imgurl
+                'pic_path'=>$imgurl,
             );
             M()->startTrans();
             if(D('news')->where("id = ".$id)->save($data)){
@@ -288,11 +288,11 @@ class EditController extends Controller {
             }
         }elseif($type == 'P'){
             $data = array(
-                'thumb_path'=>$thumb,
-                'picture_path'=>$imgurl
+                'information_pic_path'=>$thumb,
+                'pic_path'=>$imgurl,
             );
             M()->startTrans();
-            if(D('production')->where("id = ".$id)->save($data)){
+            if(D('standard')->where("id = ".$id)->save($data)){
                 $result['msg'] = 'succ';
                 M()->commit();
             }else{
@@ -918,20 +918,19 @@ class EditController extends Controller {
 
         if($de == 'A'){
             $type = 0;//标准立项
-        }else if($de = 'B'){
+        }else if($de == 'B'){
             $type = 1;//标准发布
-        }else if($de = 'C'){
+        }else if($de == 'C'){
             $type = 2;//标准动态
         }
-
         if($de =='A'){
             $page = I("p",'int');
             $pagesize = 10;
             if($page<=0) $page = 1;
             $offset = ( $page-1 ) * $pagesize;
             $where="type = $type";
-            $result=D('news')->where($where)->limit("{$offset},{$pagesize}")->select();
-            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $result=D('standard')->where($where)->limit("{$offset},{$pagesize}")->select();
+            $count = D("standard")->where($where)->count();//!!!!!!!!!!!!!!
             $Page       = new \Think\Page($count,$pagesize);
             $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
             $pagination       = $Page->show();// 分页显示输出*
@@ -941,22 +940,23 @@ class EditController extends Controller {
             if($page2<=0) $page2 = 1;
             $offset2 = ( $page2-1 ) * $pagesize2;
             $where="type = $type";
-            $result=D('news')->where($where)->limit("{$offset2},{$pagesize2}")->select();
-            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
+            $result=D('standard')->where($where)->limit("{$offset2},{$pagesize2}")->select();
+            $count = D("standard")->where($where)->count();//!!!!!!!!!!!!!!
             $Page       = new \Think\Page($count,$pagesize2);
             $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
             $pagination       = $Page->show();// 分页显示输出$Page
-        }elseif ($de =='C'){
-            $page3 = I("p3",'int');
+        }elseif ($de =='C') {
+            $page3 = I("p3", 'int');
             $pagesize3 = 10;
-            if($page3<=0) $page3 = 1;
-            $offset3 = ( $page3-1 ) * $pagesize3;
-            $where="type = $type";
-            $result=D('news')->where($where)->limit("{$offset3},{$pagesize3}")->select();
-            $count = D("news")->where($where)->count();//!!!!!!!!!!!!!!
-            $Page       = new \Think\Page($count,$pagesize3);
-            $Page->setConfig('theme',"<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
-            $pagination       = $Page->show();// 分页显示输出$Page
+            if ($page3 <= 0) $page3 = 1;
+            $offset3 = ($page3 - 1) * $pagesize3;
+            $where = "type = $type";
+            $result = D('standard')->where($where)->limit("{$offset3},{$pagesize3}")->select();
+            $count = D("standard")->where($where)->count();//!!!!!!!!!!!!!!
+            $Page = new \Think\Page($count, $pagesize3);
+            $Page->setConfig('theme', "<ul class='pagination'></li><li>%FIRST%</li><li>%UP_PAGE%</li><li>%LINK_PAGE%</li><li>%DOWN_PAGE%</li><li>%END%</li><li><a> %HEADER%  %NOW_PAGE%/%TOTAL_PAGE% 页</a></ul>");
+            $pagination = $Page->show();// 分页显示输出$Page
+            }
         $body=array(
             'de'=>$de,
             'list'=>$result,
@@ -965,5 +965,116 @@ class EditController extends Controller {
         $this->assign($body);
         $this->display();
         }
+    //b标准化工作新增
+    public function addStandardized(){
+        $de = I('de');
+        $id = I('id');
+        if($id){
+            $check = D('standard')->where('id ='.$id)->find();
+            $check['content'] =htmlspecialchars($check['content']);
+            $body = array(
+                'one'=>$check,
+                'de'=>$de,
+                'id'=>$id,
+            );
+        }else{
+            $body = array(
+                'de'=>$de
+            );
+        }
+        $this->assign($body);
+        $this->display();
+    }
+
+    //保存信息
+    public function saveStandard(){
+        $de = I('type');
+        $id = I('id');
+        if($de == 'A'){
+            $type = 0;
+        }elseif($de == 'B'){
+            $type = 1;
+        }elseif ($de =='C'){
+            $type =2;
+        }
+        $title = $_POST["title"];
+        $content = $_POST["content"];
+        $result = array("msg"=>"fail");
+        if($id){
+            $data = array(
+                'title' => $title,
+                'content' => $content,
+                'save_time'=>date("Y-m-d H:i:s"),
+            );
+            M()->startTrans();
+            if(D('standard')->where("id =".$id)->save($data)){
+                $result['msg'] = 'succ';
+                M()->commit();
+            }else{
+                M()->rollback();
+            }
+        }else{
+            $data = array(
+                'type'=>$type,
+                'title' => $title,
+                'content' => $content,
+                'save_time'=>date("Y-m-d H:i:s"),
+            );
+            M()->startTrans();
+            if(D('standard')->add($data)){
+                $result['msg'] = 'succ';
+                M()->commit();
+            }else{
+                M()->rollback();
+            }
+        }
+        $this->ajaxReturn($result);
+    }
+
+    //设置标准化特殊展板
+    public function doSpecial2(){
+        $id = I('id');
+        $rs['msg'] = 'fail!';
+        if (empty($id)) {
+            $rs['msg'] = 'fail!';
+            $this->ajaxReturn($rs);
+        }
+        $data = array(
+            "if_special" => 0,
+        );
+        $data1 = array(
+            "if_special" => 1,
+        );
+        //检查之前是否有设置展板
+        $check = D('standard')->where('if_special =1')->find();
+        if ($check) {//如果有，先把它清空
+            $old = $check['id'];
+            M()->startTrans();
+            if (D('standard')->where('id =' . $old)->save($data) and D('standard')->where('id =' . $id)->save($data1)) {
+                $rs['msg'] = 'succ';
+                M()->commit();
+            } else {
+                M()->rollback();
+            }
+        }
+        else{
+            M()->startTrans();
+            if (D('standard')->where('id =' . $id)->save($data1)) {
+                $rs['msg'] = 'succ';
+                M()->commit();
+            } else {
+                M()->rollback();
+            }
+        }
+        $this->ajaxReturn($rs);
+    }
+    //删除
+    public function doStandardDelete(){
+        $id =I("id",0,'intval');
+        $rs = array("msg"=>"fail");
+        if(D("standard")->where("id=".$id)->delete()){
+            $rs['msg'] = 'succ';
+        }
+        $this->ajaxReturn($rs);
     }
 }

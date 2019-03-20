@@ -8,19 +8,10 @@
                     <label class="col-sm-2 control-label talign-center fz13">照片</label>
                     <div class="col-sm-10">
                         <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
-                            <if condition="$type eq I">
-                                <img src="{$image['information_pic_path']}" onerror="this.src='__PUBLIC__/static/images/default-timg.gif'" style="height: 100%;" />
-                                <else/>
-                                <img src="{$image['thumb_path']}" onerror="this.src='__PUBLIC__/static/images/default-timg.gif'" style="height: 100%;" />
-                            </if>
+                            <img src="{$image['information_pic_path']}" onerror="this.src='__PUBLIC__/static/images/default-timg.gif'" style="height: 100%;" />
                         </div>
-                        <if condition="$type eq I ">
-                            <input type="hidden" name="information_pic_path" value="{$image['information_pic_path']}" />
-                            <input type="hidden" name="pic_path" value="{$image['pic_path']}" />
-                            <else/>
-                            <input type="hidden" name="imgurl" value="{$image['thumb_path']}" />
-                        </if>
-
+                        <input type="hidden" name="information_pic_path" value="{$image['information_pic_path']}" />
+                        <input type="hidden" name="pic_path" value="{$image['pic_path']}" />
                         <input type="hidden" name="id" value="{$id}"/>
                         <input type="hidden" name="type" value="{$type}"/>
                         <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" style="display:none;"  />

@@ -31,6 +31,7 @@
                     <li class="dropdown">
                         <a href="/Home/Information/introduction" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">中心简介 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="/Home/Information/basic">中心概况</a></li>
                             <li><a href="/Home/Information/structure">机构设置</a></li>
                             <li><a href="/Home/Information/certificate">资质证书</a></li>
                         </ul>
@@ -115,57 +116,41 @@
     <div class="row">
         <div class="col-xs-3 col-md-2" id="download-left">
             <ul class="list-group">
-                <li class="list-group-item list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
+                <li class="list-group-item" id="list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
               </ul>
               <ul class="list-group">
-                <li class="list-group-item list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
+                <li class="list-group-item" id="list-group-title">资料下载<span class="glyphicon glyphicon-chevron-right"></span></li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
                 <li class="list-group-item">
-                    <a href="">
-                        <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                        <span class="list-left-date">2019-03-12</span>
-                    </a>
+                    <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                    <span class="list-left-date">2019-03-12</span>
                 </li>
               </ul>
         </div>
@@ -214,34 +199,24 @@
                 <div class="col-xs-8 col-md-8" id="information-news-details">
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                       </ul>
                 </div>
@@ -255,28 +230,20 @@
                     <hr />
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                       </ul>
                 </div>
@@ -288,28 +255,20 @@
                     <hr />
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                         <li class="list-group-item">
-                            <a href="">
-                                <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
-                                <span class="list-left-date">2019-03-12</span>
-                            </a>
+                            <span class="list-left-title">首届华东六省首届华东六省首届华东六省首届华东六省首届华东六省</span>
+                            <span class="list-left-date">2019-03-12</span>
                         </li>
                       </ul>
                 </div>
@@ -352,7 +311,7 @@
                     <div class="thumbnail">
                         <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
                         <div class="caption">
-                            <p>Thumbnail label</p>
+                            <p>实验室一</p>
                         </div>
                     </div>
                 </div>
@@ -360,7 +319,7 @@
                     <div class="thumbnail">
                         <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
                         <div class="caption">
-                            <p>Thumbnail label</p>
+                            <p>实验室二</p>
                         </div>
                     </div>
                 </div>
@@ -368,7 +327,7 @@
                     <div class="thumbnail">
                         <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
                         <div class="caption">
-                            <p>Thumbnail label</p>
+                            <p>实验三</p>
                         </div>
                     </div>
                 </div>
@@ -376,7 +335,7 @@
                     <div class="thumbnail">
                         <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
                         <div class="caption">
-                            <p>Thumbnail label</p>
+                            <p>实验室四</p>
                         </div>
                     </div>
                 </div>
@@ -384,7 +343,7 @@
                     <div class="thumbnail">
                         <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
                         <div class="caption">
-                            <p>Thumbnail label</p>
+                            <p>实验室五</p>
                         </div>
                     </div>
                 </div>
@@ -392,7 +351,7 @@
                     <div class="thumbnail">
                         <img src="/Public/picture/lab_image/20130301082708_76145.jpg" alt="...">
                         <div class="caption">
-                            <p>Thumbnail label</p>
+                            <p>实验室六</p>
                         </div>
                     </div>
                 </div>
@@ -422,7 +381,7 @@
   <div class="footer-small">
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-xs-8">
+        <div class="col-md-12 col-xs-12">
             <div class="copyright"> <p>Copyright © 2013-2018 BUPT All Rights Reserved. 备案号：闽ICP备15012807号-1</p>
             </div>
         </div>
