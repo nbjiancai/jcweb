@@ -1,7 +1,17 @@
 <include file="Common:header" title="后台首页"/>
 <div id="page-wrapper">
     <include file="Common:breadcrumb" />
-    <div id="page-inner" class="container">
+    <div id="page-inner" class="container"}>
+        <!--控制改变div背景色-->
+        <!--<style type="text/css">-->
+        <!--table-hover{background:#87CEFF;}-->
+        <!--&lt;!&ndash;</style>&ndash;&gt;-->
+        <style type="text/css">
+            div{text-align:center;}
+            thead{text-align:center;}
+            th{text-align:center;}
+
+        </style>
         <ul class="nav nav-tabs">
             <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/news?de=A" >行业新闻</a></li>
             <li role="presentation" class="active" id="de_B" name="de"><a href="/admin/edit/news?de=B" >通知公告</a></li>
@@ -13,10 +23,11 @@
 
             <a class="btn btn-success btn-xs" href="{:U('/admin/edit/addInformation')}?de={$de}"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
 
-            <table class="table table-bordered table-striped table-hover">
+            <table class="table table-bordered table-bordered table-hover">
+
                 <thead>
                 <th width="15%">展示图</th>
-                <th width="50%">
+                <th width="30%">
                     <if condition="$de eq A">行业新闻标题</if>
                     <if condition="$de eq B">通知公告标题</if>
                 </th>
@@ -25,6 +36,7 @@
                 <tbody>
                 <volist name="list" id="one">
                     <tr>
+
                         <td ><img src="{$one.information_pic_path}" onerror="this.src='__PUBLIC__/static/images/default-timg.gif'" style="width: 90px;"></td>
                         <td >{$one.title}</td>
                         <td>
