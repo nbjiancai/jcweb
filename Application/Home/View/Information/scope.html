@@ -1,5 +1,42 @@
 <include file="Common:head" title="前台导航栏"/>
-<a name="notice">检测范围</a></br>
+<div class="picContainer">
+<img src="__PUBLIC__/picture/notice.jpg" alt="质检范围">
+<a id="fix-title" href="">质检范围</a>
+</div>
+<div class="container-two" id="container-content" style="position: relative" }>
+    <div class="col-xs-2 col-md-2 left-menu">
+        <ul>
+            <li><a href="/Home/Information/basic">质检流程</a></li>
+            <li><a href="/Home/Information/structure">质检范围</a></li>
+            <li><a href="/Home/Information/certificate">报告查询</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-10 col-md-10 right-content">
+        <div class="breadcrumbs">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8">
+                    <ol class="breadcrumb pull-left">
+                        <li>
+                            <i class="glyphicon glyphicon-home"></i><a href="/home/Index/index">主页</a>
+                        </li>
+                        <li>
+                            <a href="/home/Information/news">
+                                质检范围
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+<a name="notice">质检范围</a></br>
 <volist name="scope" id="vo">
     <a href="{:U('/home/Information/scopeDetail')}?id={$vo['id']}">{$vo.title}</a></br>
 </volist>
