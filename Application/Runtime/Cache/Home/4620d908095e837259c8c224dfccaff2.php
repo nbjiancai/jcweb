@@ -22,7 +22,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Home/index">建筑材料干混砂浆产品质量监督检验测试中心</a>
+                <a class="navbar-brand" href="/Home/index">
+                    <img src="/Public/picture/logo.png" alt="" />
+                    <div class="navbar-header-right">
+                        <p>(国家)建筑材料工业技术监督研究中心</p>
+                        <p>建筑材料干混砂浆产品质量监督检验测试中心</p>
+                    </div>
+                </a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -46,16 +52,24 @@
                     <li class="dropdown">
                         <a href="/Home/Information/process" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">质检服务 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/process">质检流程</a></li>
+                            <li><a href="/Home/Information/process">检测流程</a></li>
                             <li><a href="/Home/Information/scope">质检范围</a></li>
                             <li><a href="/Home/Information/query">报告查询</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
+                        <a href="/Home/Information/process" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">标准化工作 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Home/Information/process">标准立项</a></li>
+                            <li><a href="/Home/Information/scope">标准发布</a></li>
+                            <li><a href="/Home/Information/query">标准动态</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
                             <a href="/Home/Information/file" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">资料下载 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Home/Information/file">检测资料</a></li>
-                                <li><a href="/Home/Information/file#standard">标准资料</a></li>
+                                <li><a href="/Home/Information/file">标准资料</a></li>
+                                <li><a href="/Home/Information/file2">检测资料</a></li>
                             </ul>
                     </li>
                     <li id="contact-us"><a href="/Home/Information/contact">联系我们</a></li>
@@ -66,53 +80,108 @@
 </header>
 
 
-<div>
-    <h2>联系我们</h2>
-    <div>
-        <text>postal_code:</text><text><?php echo ($contact["postal_code"]); ?></text><br/>
-        <text>address:</text><text><?php echo ($contact["address"]); ?></text><br/>
-        <text>phone_number:</text><text><?php echo ($contact["phonenumber"]); ?></text><br/>
-        <text>consult_phone:</text><text><?php echo ($contact["consult_phone"]); ?></text><br/>
-        <text>email:</text><text><?php echo ($contact["email"]); ?></text><br/>
+<div class="picContainer">
+    <img src="/Public/picture/notice.jpg" alt="联系我们">
+    <a id="fix-title" href="">联系我们</a>
+</div>
+<div class="container-two" id="container-content" style="position: relative" }>
+
+    <div class="row">
+        <div class="col-xs-2 col-md-2 left-menu">
+            <ul>
+                <li><a href="/Home/Information/basic">中心概况</a></li>
+                <li><a href="/Home/Information/structure">机构设置</a></li>
+                <li><a href="/Home/Information/certificate">资质证书</a></li>
+            </ul>
+        </div>
+
+    <div class="col-xs-10 col-md-10 right-content .right-content }">
+        <div class="breadcrumbs">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8">
+                    <ol class="breadcrumb pull-left">
+                        <li>
+                            <i class="glyphicon glyphicon-home"></i><a href="/home/Index/index">
+                            主页
+                        </a>
+                        </li>
+                        <li>
+                                <a href="/home/Information/information">
+                                    联系我们
+                                </a>
+                        </li>
+
+
+                    </ol>
+                </div>
+                <div class="row" id="right-content-details">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="caption">
+                            <!--<h3>联系我们</h3>-->
+                            <p>地址: <?php echo ($contact["address"]); ?></p><br/>
+                            <p>电话/传真: <?php echo ($contact["phonenumber"]); ?></p><br/>
+                            <p>真伪电话查询: <?php echo ($contact["consult_phone"]); ?></p><br/>
+                            <p>E-mail: <?php echo ($contact["email"]); ?></p><br/>
+                        </div>
+                    </div>
+            </div>
+                <div style="background-color:#f9f9f3 ">
+                    <div class=" container" align="center" style="padding: 30px 30px;">
+                        <div class="gray-bg" style="background-color:#F9F9F3; ">
+                            <div id="gaodemap" style="height: 500px;width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
     </div>
 </div>
-<div id="container"></div>
+</div>
+
 <div class="container" ><div class="hr"><span class="hr-inner"></span></div></div>
 <!--footer start-->
 <footer class="footer">
   <div class="container">
-    <div class="row">
-      <div>
-        <address>
-          <div class="col-sm-4 col-md-4">
-            <p><i class="fa fa-home pr-10"></i>地址: <?php echo ($rs["address"]); ?></p></div>
-          <div class="col-sm-4 col-md-4">
-            <p><i class="fa fa-mobile pr-10"></i>联系电话 : <?php echo ($rs["telephone"]); ?> </p></div>
-          <div class="col-sm-4 col-md-4">
-            <p><i class="fa fa-envelope pr-10"></i> Email : <?php echo ($rs["email"]); ?></p></div>
-        </address>
-      </div>
-    </div>
+      <div class="row">
+          <div class="col-xs-4 col-md-4 footer-info">
+            <p><i class="glyphicon glyphicon-lock"></i>备案号: <?php echo ($footer["record"]); ?></p>
+            <p><i class="glyphicon glyphicon-envelope"></i> Email : <?php echo ($footer["email"]); ?></p>
+          </div>
+          <div class="col-xs-4 col-md-4 footer-info">
+            <p><i class="glyphicon glyphicon-home"></i>地址: <?php echo ($footer["address"]); ?></p>
+            <p><i class="glyphicon glyphicon-phone-alt"></i>联系电话 : <?php echo ($footer["telephone"]); ?> </p>
+          </div>
+          <div class="col-xs-4 col-md-4 footer-img">
+            <img src="/Public/picture/footerCode.png" alt="">
+          </div>
+        </div>
   </div>
-  <div style="padding-bottom: 20px"></div>
-  <!--small footer start -->
+  <!--small footer start-->
   <div class="footer-small">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-xs-12">
-            <div class="copyright"> <p>Copyright © 2013-2018 BUPT All Rights Reserved. 备案号：闽ICP备15012807号-1</p>
+            <div class="copyright"> <p>Copyright © 2013-2018 BUPT All Rights Reserved. </p>
             </div>
         </div>
       </div>
     </div>
   </div>
 </footer>
-
+<!--<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.5&key=6cdce0833c160c7358e0700085a42ec5"></script>-->
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.13&key=1f342e37b7e51d824cdcd9a940a3d37a"></script>
 <script type="text/javascript" >
-    var map = new AMap.Map('container', {
-        zoom:15,//级别
-        center: [116.59706,39.917001],//中心点坐标
-        viewMode:'3D'//使用3D视图
+    // var map = new AMap.Map('container', {
+    //     resizeEnable: true,
+    //     center: [116.59706,39.917001],
+    //     zoom: 15
+    // });
+    //地图初始化时，在地图上添加一个marker标记,鼠标点击marker可弹出自定义的信息窗体
+    var map = new AMap.Map("gaodemap", {
+        resizeEnable: true,
+        center: [116.597735,39.917448],
+        zoom: 15
     });
     var infoWindow = new AMap.InfoWindow({ //创建信息窗体
         isCustom: true,  //使用自定义窗体
@@ -124,11 +193,43 @@
         //e.target就是被点击的Marker
     }
     var marker = new AMap.Marker({
-        position: [116.59706,39.917001]
+        map: map,
+        position: [116.597735,39.917448]
     })
     map.add(marker);
     marker.on('click',onMarkerClick);//绑定click事件
+
+
+
+    addMarker();
+    //添加marker标记
+    function addMarker() {
+        map.clearMap();
+        var marker = new AMap.Marker({
+            map: map,
+            position: [116.597735,39.917448]
+        });
+        //鼠标点击marker弹出自定义的信息窗体
+        AMap.event.addListener(marker, 'click', function() {
+            infoWindow.open(map, marker.getPosition());
+        });
+    }
+    //构建信息窗体中显示的内容
+    var info = [];
+    info.push("<div style=\"padding:0px 0px 0px 4px;\"><b style='color: #CF6942;font-size: 20px;'>建筑材料工业干混砂浆产品质量监督检验测试中心</b>");
+    info.push("<strong style='font-size: 16px;'>电话 :</strong> \n" + "<b style='font-size: 16px;'>010-51164723 010-51164718</b> ");
+    info.push("<div style='font-size: 16px;'><strong>地址 :</strong>北京市朝阳区管庄东里中国建材院内北楼</div></div>");
+    infoWindow = new AMap.InfoWindow({
+        content: info.join("<br/>")  //使用默认信息窗体框样式，显示信息内容
+    });
+    infoWindow.open(map, map.getCenter());
+    //关闭信息窗体
+    function closeInfoWindow() {
+        map.clearInfoWindow();
+    }
+
 </script>
+<script type="text/javascript" src="http://webapi.amap.com/demos/js/liteToolbar.js"></script>
 <script type="text/javascript" src="/Public/static/js/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="/Public/static/js/bootstrap.min.js"></script>
 </body>
