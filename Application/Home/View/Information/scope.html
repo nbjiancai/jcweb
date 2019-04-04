@@ -1,13 +1,13 @@
 <include file="Common:head" title="前台导航栏"/>
 <div class="picContainer">
-<img src="__PUBLIC__/picture/notice.jpg" alt="质检范围">
-<a id="fix-title" href="">质检范围</a>
+    <img src="__PUBLIC__/picture/notice.jpg" alt="质检范围">
+    <a id="fix-title" href="">质检范围</a>
 </div>
 <div class="container-two" id="container-content" style="position: relative" }>
     <div class="col-xs-2 col-md-2 left-menu">
         <ul>
-            <li><a href="/Home/Information/basic">质检流程</a></li>
-            <li><a href="/Home/Information/structure">质检范围</a></li>
+            <li><a href="/Home/Information/process">质检流程</a></li>
+            <li><a href="/Home/Information/scope">质检范围</a></li>
             <li><a href="/Home/Information/certificate">报告查询</a></li>
         </ul>
     </div>
@@ -28,7 +28,14 @@
                 </div>
             </div>
         </div>
-
+        <a name="notice">质检范围</a></br>
+        </br>
+        <volist name="scope" id="vo">
+            <a href="{:U('/home/Information/scopeDetail')}?id={$vo['id']}" style="display: block;font-size: large" >{$vo.title}</a>
+            <span>发布：{$vo.save_time}</span>
+            </br>
+        </volist>
+        <nav>{$pagination}</nav>
 
 
     </div>
@@ -36,9 +43,5 @@
 
 
 </div>
-<a name="notice">质检范围</a></br>
-<volist name="scope" id="vo">
-    <a href="{:U('/home/Information/scopeDetail')}?id={$vo['id']}">{$vo.title}</a></br>
-</volist>
-<nav>{$pagination}</nav>
+
 <include file="Common:footer"/>

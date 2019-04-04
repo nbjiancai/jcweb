@@ -1,4 +1,4 @@
-<include file="Common:head" title="前台导航栏"/>
+<include file="Common:head" title="前台导航栏" xmlns="http://www.w3.org/1999/html"/>
 <div class="picContainer">
     <img src="__PUBLIC__/picture/notice.jpg" alt="资料下载">
     <a id="fix-title" href="">资料下载</a>
@@ -26,18 +26,17 @@
                             </li>
 
                         </ol>
-                        <a name="">检测资料</a></br>
-                        <!--<nav> {$boby}></nav>-->
-                        <volist name="data" id="vo">
-                        <a href="{$vo['save_path']}" download="{$vo['filename']}">{$vo.filename}</a></br>
-                        </volist>
-                        <nav>{$pagination1}</nav>
-
 
                     </div>
                 </div>
             </div>
-
+            <a name="">检测资料</a></br>
+        </br>
+            <!--<nav> {$boby}></nav>-->
+            <volist name="data" id="vo">
+                <a href="{$vo['save_path']}" download="{$vo['filename']}"style="display: block;font-size: large">{$vo.filename}</a></br>
+            </volist>
+            <nav>{$pagination1}</nav>
 
 
 <!--<a name="">检测资料</a></br>-->
