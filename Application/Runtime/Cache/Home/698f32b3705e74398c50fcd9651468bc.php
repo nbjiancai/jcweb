@@ -67,16 +67,15 @@
 
 
 <div class="picContainer">
-    <img src="/Public/picture/notice.jpg" alt="质检服务">
-    <a id="fix-title" href="">质检服务</a>
+    <img src="/Public/picture/notice.jpg" alt="资料下载">
+    <a id="fix-title" href="">资料下载</a>
 </div>
 <div class="container-two" id="container-content" style="position: relative" }>
     <div class="row">
         <div class="col-xs-2 col-md-2 left-menu">
             <ul>
-                <li><a href="/Home/Information/process">质检流程</a></li>
-                <li><a href="/Home/Information/scope">质检范围</a></li>
-                <li><a href="/Home/Information/certificate">报告查询</a></li>
+                <li><a href="/Home/Information/file">检测资料</a></li>
+                <li><a href="/Home/Information/scope">标准资料</a></li>
             </ul>
         </div>
         <div class="col-xs-10 col-md-10 right-content">
@@ -89,30 +88,33 @@
                             </li>
                             <li>
                                 <a href="/home/Information/news">
-                                    质检流程
+                                    标准资料
                                 </a>
                             </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="right-content-details">
-                <div class="col-xs-12 col-md-12">
-                    <h3>标题：<?php echo ($process["name"]); ?></h3>
-                    <p> 发布时间：<?php echo ($process["save_time"]); ?></p>
-                    <div>
-                        <?php echo ($process["content"]); ?>
-                    </div>
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
 
+                        </ol>
+
+
+                    </div>
                 </div>
             </div>
-</div>
+
+
+
+            <!--<a name="">检测资料</a></br>-->
+            <!--<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>-->
+            <!--<a href="<?php echo ($vo['save_path']); ?>" download="<?php echo ($vo['filename']); ?>"><?php echo ($vo["filename"]); ?></a></br>-->
+            <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+            <!--<nav><?php echo ($pagination1); ?></nav>-->
+
+            <!--<a name="standard">资料下载</a></br>-->
+            <!--<?php if(is_array($standard)): $i = 0; $__LIST__ = $standard;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>-->
+            <!--<a href="<?php echo ($vo['save_path']); ?>" download="<?php echo ($vo['filename']); ?>"><?php echo ($vo["filename"]); ?></a></br>-->
+            <!--<?php endforeach; endif; else: echo "" ;endif; ?>-->
+            <!--<nav><?php echo ($pagination2); ?></nav>-->
+        </div>
     </div>
+</div>
 </div>
 <div class="container" ><div class="hr"><span class="hr-inner"></span></div></div>
 <!--footer start-->

@@ -1,7 +1,7 @@
 <include file="Common:head" title="前台导航栏"/>
 <div class="picContainer">
     <img src="__PUBLIC__/picture/notice.jpg" alt="新闻中心">
-    <a id="fix-title" href="">新闻中心</a>
+    <a id="fi x-title" href="">新闻中心</a>
 </div>
 <div class="container-two" id="container-content">
     <div class="row">
@@ -27,13 +27,14 @@
                                 <a href="/home/Information/information">
                                     新闻中心
                                 </a>
+                                <!--<else />-->
+                                <!--</if>-->
                             </li>
                             <li>
-                                <!--<else />-->
-                                <a href="/home/Information/information#dynamic">
-                                    通知公告
-                                </a>
-                                <!--</if>-->
+                                <a href="/home/Information/information#dynamic"></a>
+                                行业新闻
+                            </li>
+
                             </li>
                         </ol>
                     </div>
@@ -45,12 +46,12 @@
                         <volist name="notice" id="vo" key="{i}">
                             <li class="media">
                                 <div class="media-left">
-                                    <a href="{:U('/home/Information/newDetail')}?type=1&id={$vo['id']}">
+                                    <a href="{:U('/home/Information/newDetail')}?type=0&id={$vo['id']}">
                                         <img class="media-object" src='__PUBLIC__/picture/number-{$i}.png' alt="......">
                                     </a>
                                 </div>
                                 <div class="media-body">
-                                    <a href="{:U('/home/Information/newDetail')}?type=1&id={$vo['id']}" style="color: #000;">
+                                    <a href="{:U('/home/Information/newDetail')}?type=0&id={$vo['id']}" style="color: #000;">
                                         <h4 class="media-heading">{$vo.title}</h4>
                                     </a>
                                     <span>发布：{$vo.save_time}</span>
