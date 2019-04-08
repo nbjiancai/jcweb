@@ -46,7 +46,7 @@
                         <a href="/Home/Information/news" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/Home/Information/news">通知公告</a></li>
-                            <li><a href="/Home/Information/news#industry">行业新闻</a></li>
+                            <li><a href="/Home/Information/notice">行业新闻</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -60,16 +60,16 @@
                     <li class="dropdown">
                         <a href="/Home/Information/process" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">标准化工作 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/process">标准立项</a></li>
-                            <li><a href="/Home/Information/scope">标准发布</a></li>
-                            <li><a href="/Home/Information/query">标准动态</a></li>
+                            <li><a href="/Home/Information/project">标准立项</a></li>
+                            <li><a href="/Home/Information/issued">标准发布</a></li>
+                            <li><a href="/Home/Information/dynamic">标准动态</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                             <a href="/Home/Information/file" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">资料下载 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/Home/Information/file">标准资料</a></li>
-                                <li><a href="/Home/Information/file2">检测资料</a></li>
+                                <li><a href="/Home/Information/testfile">检测资料</a></li>
                             </ul>
                     </li>
                     <li id="contact-us"><a href="/Home/Information/contact">联系我们</a></li>

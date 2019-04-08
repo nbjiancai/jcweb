@@ -22,7 +22,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/Home/index">建筑材料干混砂浆产品质量监督检验测试中心</a>
+                <a class="navbar-brand" href="/Home/index">
+                    <img src="/Public/picture/logo.png" alt="" />
+                    <div class="navbar-header-right">
+                        <p>(国家)建筑材料工业技术监督研究中心</p>
+                        <p>建筑材料干混砂浆产品质量监督检验测试中心</p>
+                    </div>
+                </a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,22 +46,30 @@
                         <a href="/Home/Information/news" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="/Home/Information/news">通知公告</a></li>
-                            <li><a href="/Home/Information/news#industry">行业新闻</a></li>
+                            <li><a href="/Home/Information/notice">行业新闻</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="/Home/Information/process" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">质检服务 <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Home/Information/process">质检流程</a></li>
+                            <li><a href="/Home/Information/process">检测流程</a></li>
                             <li><a href="/Home/Information/scope">质检范围</a></li>
                             <li><a href="/Home/Information/query">报告查询</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
+                        <a href="/Home/Information/process" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">标准化工作 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Home/Information/project">标准立项</a></li>
+                            <li><a href="/Home/Information/issued">标准发布</a></li>
+                            <li><a href="/Home/Information/dynamic">标准动态</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
                             <a href="/Home/Information/file" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">资料下载 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Home/Information/file">检测资料</a></li>
-                                <li><a href="/Home/Information/file2">标准资料</a></li>
+                                <li><a href="/Home/Information/file">标准资料</a></li>
+                                <li><a href="/Home/Information/testfile">检测资料</a></li>
                             </ul>
                     </li>
                     <li id="contact-us"><a href="/Home/Information/contact">联系我们</a></li>
@@ -118,26 +132,20 @@
 <!--footer start-->
 <footer class="footer">
   <div class="container">
-    <div class="row">
-      <div>
-        <address>
-          <div class="col-sm-5 col-md-9">
-            <!--<p><i class="fa fa-home pr-10"></i> <?php echo ($footer["title"]); ?></p>-->
-            <p><i class="fa fa-home pr-10"></i>备案号: <?php echo ($footer["record"]); ?></p>
-            <p><i class="fa fa-envelope pr-10"></i> Email : <?php echo ($footer["email"]); ?></p>
+      <div class="row">
+          <div class="col-xs-4 col-md-4 footer-info">
+            <p><i class="glyphicon glyphicon-lock"></i>备案号: <?php echo ($footer["record"]); ?></p>
+            <p><i class="glyphicon glyphicon-envelope"></i> Email : <?php echo ($footer["email"]); ?></p>
           </div>
-          <div class="col-sm-5 col-md-3">
-            <p><i class="fa fa-home pr-10"></i>地址: <?php echo ($footer["address"]); ?></p>
-            <p><i class="fa fa-mobile pr-10"></i>联系电话 : <?php echo ($footer["telephone"]); ?> </p>
+          <div class="col-xs-4 col-md-4 footer-info">
+            <p><i class="glyphicon glyphicon-home"></i>地址: <?php echo ($footer["address"]); ?></p>
+            <p><i class="glyphicon glyphicon-phone-alt"></i>联系电话 : <?php echo ($footer["telephone"]); ?> </p>
           </div>
-          <!--<div class="col-sm-6 col-md-6">-->
-            <!--<p><i class="fa fa-home pr-10"></i> 您是第66666位访客，开心么!</p>-->
-          <!--</div>-->
-        </address>
-      </div>
-    </div>
+          <div class="col-xs-4 col-md-4 footer-img">
+            <img src="/Public/picture/footerCode.png" alt="">
+          </div>
+        </div>
   </div>
-  <div style="padding-bottom: 20px"></div>
   <!--small footer start-->
   <div class="footer-small">
     <div class="container">

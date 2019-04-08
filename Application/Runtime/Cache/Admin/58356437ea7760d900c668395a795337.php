@@ -283,7 +283,17 @@
             }
         });
 </script>
-    <div id="page-inner" class="container">
+    <div id="page-inner" class="container"}>
+        <!--控制改变div背景色-->
+        <!--<style type="text/css">-->
+        <!--table-hover{background:#87CEFF;}-->
+        <!--&lt;!&ndash;</style>&ndash;&gt;-->
+        <style type="text/css">
+            div{text-align:center;}
+            thead{text-align:center;}
+            th{text-align:center;}
+
+        </style>
         <ul class="nav nav-tabs">
             <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/edit/news?de=A" >行业新闻</a></li>
             <li role="presentation" class="active" id="de_B" name="de"><a href="/admin/edit/news?de=B" >通知公告</a></li>
@@ -295,10 +305,11 @@
 
             <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addInformation');?>?de=<?php echo ($de); ?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
 
-            <table class="table table-bordered table-striped table-hover">
+            <table class="table table-bordered table-bordered table-hover">
+
                 <thead>
                 <th width="15%">展示图</th>
-                <th width="50%">
+                <th width="30%">
                     <?php if($de == A): ?>行业新闻标题<?php endif; ?>
                     <?php if($de == B): ?>通知公告标题<?php endif; ?>
                 </th>
@@ -306,6 +317,7 @@
                 </thead>
                 <tbody>
                 <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+
                         <td ><img src="<?php echo ($one["information_pic_path"]); ?>" onerror="this.src='/Public/static/images/default-timg.gif'" style="width: 90px;"></td>
                         <td ><?php echo ($one["title"]); ?></td>
                         <td>
