@@ -1,0 +1,847 @@
+[ 2019-03-22T09:35:19+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000249s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0124s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000163s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000205s ]
+
+[ 2019-03-22T09:35:19+08:00 ] 127.0.0.1 /index.php/admin/account/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000079s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000124s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0078s ]
+NOTIC: [8] Undefined variable: body C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 20 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023497s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000081s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000123s ]
+
+[ 2019-03-22T09:35:19+08:00 ] 127.0.0.1 /index.php/admin/Account/yzmCode.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000149s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000210s ]
+
+[ 2019-03-22T09:35:30+08:00 ] 127.0.0.1 /index.php/admin/account/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000240s ]
+
+[ 2019-03-22T09:35:30+08:00 ] 127.0.0.1 /index.php/admin/Account/yzmCode.html?0.804106240009183
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000252s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000312s ]
+
+[ 2019-03-22T09:35:37+08:00 ] 127.0.0.1 /index.php/admin/account/doLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000130s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `common_system_user` WHERE `username` = 'admin' AND `passwd` = 'dd6e5e5918e94d997c686fcebc56922f' AND `status` = 1 LIMIT 1   [ RunTime:0.0050s ]
+SQL: UPDATE `common_system_user` SET `login_time`='2019-03-22 09:35:37' WHERE ( id=1 ) [ RunTime:0.0040s ]
+NOTIC: [8] Undefined variable: role C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 52 行.
+NOTIC: [8] Undefined variable: role C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 56 行.
+NOTIC: [8] Undefined variable: menus C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AccountController.class.php 第 60 行.
+
+[ 2019-03-22T09:35:37+08:00 ] 127.0.0.1 /index.php/admin/account/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000136s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0079s ]
+
+[ 2019-03-22T09:35:37+08:00 ] 127.0.0.1 /index.php/admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000131s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0077s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003957s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004022s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000190s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000097s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000141s ]
+
+[ 2019-03-22T09:35:37+08:00 ] 127.0.0.1 /admin/main/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000244s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0087s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033741s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000133s ]
+
+[ 2019-03-22T09:35:37+08:00 ] 127.0.0.1 /index.php/admin/auth/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000116s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0113s ]
+SQL: SHOW COLUMNS FROM `common_admin_nav` [ RunTime:0.0087s ]
+SQL: SELECT `id`,`name`,pid as parentid,`url`,`status`,`addtime`,`disorder`,`path`,`icon` FROM `common_admin_nav` WHERE ( status=1 ) ORDER BY pid asc,disorder asc  [ RunTime:0.0052s ]
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [2] strrchr() expects exactly 2 parameters, 1 given C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 511 行.
+NOTIC: [8] Undefined offset: 94 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 94 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 109 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+NOTIC: [8] Undefined offset: 127 C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\AuthController.class.php 第 214 行.
+
+[ 2019-03-22T09:35:37+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218537658
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000175s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000231s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000274s ]
+
+[ 2019-03-22T09:35:40+08:00 ] 127.0.0.1 /admin/main/lunbo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000136s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `home_image` LIMIT 0,10   [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0032s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 299 行.
+NOTIC: [8] Undefined variable: centreno C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 310 行.
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 316 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\693fb95b42aef6a4f677611d1562b6e3.php 第 333 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046618s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000108s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000153s ]
+
+[ 2019-03-22T09:35:40+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218540513
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000086s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0080s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000301s ]
+
+[ 2019-03-22T09:35:42+08:00 ] 127.0.0.1 /admin/edit/aboutus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000122s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0099s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2019-03-22T09:35:42+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218542056
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000138s ]
+
+[ 2019-03-22T09:35:42+08:00 ] 127.0.0.1 /admin/edit/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0122s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `news` WHERE ( type = 1 ) LIMIT 0,10   [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( type = 1 ) LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\58356437ea7760d900c668395a795337.php 第 302 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\58356437ea7760d900c668395a795337.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000099s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000136s ]
+
+[ 2019-03-22T09:35:43+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218542985
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000132s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0074s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2019-03-22T09:35:44+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000147s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0121s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000152s ]
+
+[ 2019-03-22T09:35:44+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218544104
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000080s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000129s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2019-03-22T09:35:44+08:00 ] 127.0.0.1 /admin/edit/standardized
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `standard` [ RunTime:0.0116s ]
+SQL: SELECT * FROM `standard` WHERE ( type = 0 ) LIMIT 0,10   [ RunTime:0.0054s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `standard` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0046s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 303 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 304 行.
+NOTIC: [2] Use of undefined constant C - assumed 'C' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2019-03-22T09:35:44+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218544955
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000139s ]
+
+[ 2019-03-22T09:35:45+08:00 ] 127.0.0.1 /admin/edit/fileDownload
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `file_download` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `file_download` WHERE ( type = 1 ) LIMIT 0,10   [ RunTime:0.0034s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `file_download` WHERE ( type = 1 ) LIMIT 1   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\2d61b663cae6dbae8558c4f58989b93d.php 第 301 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\2d61b663cae6dbae8558c4f58989b93d.php 第 302 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029285s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2019-03-22T09:35:45+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218545669
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000161s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000134s ]
+
+[ 2019-03-22T09:35:46+08:00 ] 127.0.0.1 /admin/edit/standardized
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0094s ]
+SQL: SHOW COLUMNS FROM `standard` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `standard` WHERE ( type = 0 ) LIMIT 0,10   [ RunTime:0.0044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `standard` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 303 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 304 行.
+NOTIC: [2] Use of undefined constant C - assumed 'C' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030105s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030163s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000158s ]
+
+[ 2019-03-22T09:35:55+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218546173
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000133s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000138s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000191s ]
+
+[ 2019-03-22T09:35:55+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000154s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025947s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000090s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000135s ]
+
+[ 2019-03-22T09:35:55+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000177s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000235s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 3801155 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0108s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000168s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000212s ]
+
+[ 2019-03-22T09:35:55+08:00 ] 127.0.0.1 /admin/edit/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000142s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0093s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0105s ]
+SQL: SELECT * FROM `news` WHERE ( type = 1 ) LIMIT 0,10   [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( type = 1 ) LIMIT 1   [ RunTime:0.0033s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\58356437ea7760d900c668395a795337.php 第 302 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\58356437ea7760d900c668395a795337.php 第 303 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000140s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000167s ]
+
+[ 2019-03-22T09:35:55+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218555523
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000167s ]
+
+[ 2019-03-22T09:35:57+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0125s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026637s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000163s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000130s ]
+
+[ 2019-03-22T09:35:57+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218557090
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000145s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0099s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000112s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000236s ]
+
+[ 2019-03-22T09:35:58+08:00 ] 127.0.0.1 /admin/edit/inspection?de=B
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000092s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000137s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0109s ]
+SQL: SELECT * FROM `inspection_scope` ORDER BY id desc LIMIT 0,10   [ RunTime:0.0051s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `inspection_scope` LIMIT 1   [ RunTime:0.0071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025477s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025534s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000098s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000144s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000106s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000151s ]
+
+[ 2019-03-22T09:35:58+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218558365
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000135s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000224s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000091s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2019-03-22T09:38:52+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000129s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000228s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0118s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0043s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026944s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000192s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000170s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000215s ]
+
+[ 2019-03-22T09:38:52+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218732505
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0093s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000143s ]
+
+[ 2019-03-22T09:38:53+08:00 ] 127.0.0.1 /admin/edit/standardized
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000072s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000120s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0123s ]
+SQL: SHOW COLUMNS FROM `standard` [ RunTime:0.0219s ]
+SQL: SELECT * FROM `standard` WHERE ( type = 0 ) LIMIT 0,10   [ RunTime:0.0041s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `standard` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 303 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 304 行.
+NOTIC: [2] Use of undefined constant C - assumed 'C' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031481s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000087s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2019-03-22T09:38:53+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218733929
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000121s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000144s ]
+
+[ 2019-03-22T09:38:54+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000126s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0039s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025565s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000131s ]
+
+[ 2019-03-22T09:38:54+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218734439
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000123s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0087s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000085s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000132s ]
+
+[ 2019-03-22T09:38:55+08:00 ] 127.0.0.1 /admin/edit/standardized
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000095s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000140s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `standard` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `standard` WHERE ( type = 0 ) LIMIT 0,10   [ RunTime:0.0039s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `standard` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 303 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 304 行.
+NOTIC: [2] Use of undefined constant C - assumed 'C' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\b6e9c1a33fbe12149d6496127f6c8405.php 第 305 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029620s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000158s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000157s ]
+
+[ 2019-03-22T09:38:55+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218735326
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000118s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000259s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000092s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000145s ]
+
+[ 2019-03-22T09:38:57+08:00 ] 127.0.0.1 /admin/edit/inspection
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000128s ]
+NOTIC: [2] Declaration of Admin\Controller\EditController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\EditController.class.php 第 0 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0124s ]
+SQL: SHOW COLUMNS FROM `inspection_process` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `inspection_process` LIMIT 1   [ RunTime:0.0054s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+NOTIC: [2] Use of undefined constant A - assumed 'A' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 294 行.
+NOTIC: [2] Use of undefined constant B - assumed 'B' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Admin\db41ffc0dfb04011f095ae5ac58e2868.php 第 311 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025678s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025733s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000137s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000086s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000129s ]
+
+[ 2019-03-22T09:38:58+08:00 ] 127.0.0.1 /index.php/Admin/Uploader/ueditor.html?action=config&&noCache=1553218738008
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000096s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000141s ]
+NOTIC: [2] include(exif.php): failed to open stream: No such file or directory C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+NOTIC: [2] include(): Failed opening 'exif.php' for inclusion (include_path='.;C:\php\pear') C:\Coding\Php\Wampserver\www\jcweb\Application\Admin\Controller\UploaderController.class.php 第 4 行.
+SQL: SHOW COLUMNS FROM `common_system_user` [ RunTime:0.0085s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000123s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000181s ]
+

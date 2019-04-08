@@ -309,27 +309,62 @@
                 </div>
             </form><?php endif; ?>
         <?php if($de == B): ?><div>
-                <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addInspection');?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
+                <a class="btn btn-success btn-xs" href="<?php echo U('/admin/edit/addInspection');?>"><i class="glyphicon glyphicon-plus"></i>新增</a>
                 <table class="table table-bordered table-striped table-hover">
                     <thead>
-                    <th width="50%">检测范围</th>
-                    <th >操作</th>
+                    <th width="5%">序号</th>
+                    <th width="10%">大类名称</th>
+                    <th width="15%">类别(产品/项目/参数)</th>
+                    <th width="15%">产品/项目/参数</th>
+                    <th width="20%">依据的标准/方法</th>
+                    <th width="20%">编号</th>
+                    <th width="10%">限制范围</th>
+                    <th >状态</th>
                     </thead>
                     <tbody>
                     <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
-                            <td ><?php echo ($one["title"]); ?></td>
-                            <td>
-                                <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/edit/addInspection');?>?id=<?php echo ($one["id"]); ?>" ><i class="glyphicon glyphicon-cog"></i>修改内容</a>
-                                <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" ><i class="glyphicon glyphicon-trash"></i>删除</a>
-                            </td>
+                            <td ><?php echo ($one["path"]); ?></td>
+                            <td ><?php echo ($one["cate_name"]); ?></td>
+                            <td ><?php echo ($one["metial_name"]); ?></td>
+                            <td ><?php echo ($one["name"]); ?></td>
+                            <td ><?php echo ($one["standard"]); ?></td>
+                            <td ><?php echo ($one["number"]); ?></td>
+                            <td ><?php echo ($one["remark"]); ?></td>
+                            <td ><?php echo ($one["status"]); ?></td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </tbody>
                 </table>
                 <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
+            </div>
+            <div>
+            <a href="<?php echo U('admin/edit/expt');?>">导出Excell</a>
+            <br />
+                <form class="form-horizontal" id="myform2" action="<?php echo U('/admin/edit/impt2');?>" method="post">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label talign-center fz13">文件</label>
+                        <div class="col-sm-10">
+                            <div class="face" id="attachment" style="width: 120px;height: 80px;" onclick="onFileUpload()">
+                                <p>点击选取文件</p>
+                                <p class="help-block" id="attachment2"></p>
+                            </div>
+                            <input type="hidden" name="excelpath"/>
+                            <input type="file" name="file" onchange="excelUpload()" id="addfile" style="display:none;"  />
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label talign-center">&nbsp;</label>
+                        <div class="col-sm-10">
+                            <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onUpload()" >上传</a>
+                            <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
+                        </div>
+                    </div>
+                </form>
             </div><?php endif; ?>
     </div>
 </div>
 <script src="/Public/static/js/jquery.form.js"></script>
+<script src="/Public/static/js/ajaxfileupload.js"></script>
 <script type="text/javascript">
     $(function(){
         var de = $("#de_choose").val();
@@ -363,6 +398,7 @@
         var _options = {"flag":"error","text":"您确定要删除吗！","buttons":{"ok":{"action":function(){doneDel(id);}},"cancel":{}}};
         doConfirmDialog(_options);
     }
+
     function doneDel(id){
         if(!id) return false;
         $.ajax({
@@ -382,6 +418,73 @@
             }
         });
     }
+
+    function excelUpload(){
+        var file = $("#addfile").val();
+        console.log(file)
+        if(file){
+            $.ajaxFileUpload({
+                url: "<?php echo U('Uploader/excelUpload');?>",
+                secureuri: false,
+                fileElementId: 'addfile',
+                dataType: 'JSON',
+                success: function (data, status) {
+                    var ret = JSON.parse(data);
+                    $("#addfile").val("");
+                    //alert(ret.url);
+                    if(ret.info=='succ'){
+                        $("input[name='excelpath']").val(ret.save_path);
+                        $("#attachment2").html(ret.save_path);
+                        // $("#attachment img").attr("src",ret.information_pic_path);
+                    }else{
+                        var _options = {"text":"上传失败","flag":"error"};
+                        if(ret.info) _options.text = ret.info;
+                        doAlertDialog(_options);
+                    }
+                },
+                error: function (data, status, e){
+                    var _options = {"text":"上传失败","flag":"error"};
+                    doAlertDialog(_options);
+                }
+            });
+        }
+        return false;
+    }
+    function onFileUpload() {
+        $('#addfile').click();
+        return false;
+    }
+
+    function onUpload(){
+            var _options = {"flag":"error","text":"此操作将会覆盖之前的数据，您确定要修改吗？","buttons":{"ok":{"action":function(){excelSave();}},"cancel":{}}};
+            doConfirmDialog(_options);
+    }
+    function excelSave(){
+        var excelpath = $("input[name='excelpath']").val();
+      //  console.log(excelpath)
+        $.ajax({
+            url: "<?php echo U('/admin/edit/impt2');?>",
+            dataType: 'JSON',
+            data:{"excelpath":excelpath},
+            beforeSubmit: function(){
+                return true;
+            },
+            success: function (ret) {
+                if(ret.msg == "succ"){
+                    var _options = {"text":"修改成功","action":function(){window.location.reload()}};
+                    doAlertDialog(_options);
+                }else{
+                    var _options = {"text":"上传失败","flag":"error"};
+                    if(ret.info) _options.text = ret.info;
+                    doAlertDialog(_options);
+                }
+                return true;
+            }
+        });
+       // $("#myform2").ajaxForm(options);
+        return false;
+    }
+
 </script>
 
 	<footer>
