@@ -1,0 +1,697 @@
+[ 2019-04-09T11:03:53+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0024s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000241s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000290s ]
+
+[ 2019-04-09T11:03:55+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000109s ]
+
+[ 2019-04-09T11:04:12+08:00 ] 127.0.0.1 /Uploads/ueditor/image/20190329/5c9decc2463fc.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000088s ]
+
+[ 2019-04-09T11:17:55+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000341s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0114s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0028s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0032s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0085s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014832s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000223s ]
+
+[ 2019-04-09T11:18:05+08:00 ] 127.0.0.1 /Home/Information/notice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000142s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000197s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: type C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 107 行.
+NOTIC: [8] Undefined variable: notice C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 127 行.
+NOTIC: [8] Undefined variable: pagination1 C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 241 行.
+NOTIC: [8] Undefined variable: footer C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 253 行.
+NOTIC: [8] Undefined variable: footer C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 254 行.
+NOTIC: [8] Undefined variable: footer C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 257 行.
+NOTIC: [8] Undefined variable: footer C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\f844fb8cfd2c81c0d4b6685e32c69682.php 第 258 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026449s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000234s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000219s ]
+
+[ 2019-04-09T11:18:37+08:00 ] 127.0.0.1 /Home/Information/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000159s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `news` WHERE ( type=0 ) ORDER BY id desc LIMIT 0,4   [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: type C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 107 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025255s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025321s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000136s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000187s ]
+
+[ 2019-04-09T11:18:40+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `news` WHERE ( id = 3 ) LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018424s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000128s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2019-04-09T11:18:45+08:00 ] 127.0.0.1 /index.php/Information/news/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000111s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000157s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `news` WHERE ( type=0 ) ORDER BY id desc LIMIT 4,4   [ RunTime:0.0028s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000130s ]
+NOTIC: [8] Undefined variable: type C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 107 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021316s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000172s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000165s ]
+
+[ 2019-04-09T11:18:46+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000148s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000102s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000152s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000094s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000140s ]
+
+[ 2019-04-09T16:35:29+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+SQL: SHOW COLUMNS FROM `home_image` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `home_image` WHERE ( id not in (select max(id) from home_image) ) ORDER BY id desc  [ RunTime:0.0030s ]
+SQL: SELECT * FROM `home_image` WHERE ( id in (select max(id) from home_image) ) LIMIT 1   [ RunTime:0.0027s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `home_image` LIMIT 1   [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `contact_us` [ RunTime:0.0087s ]
+SQL: SELECT * FROM `contact_us` LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `news` WHERE ( content != '' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `center_introduction` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `center_introduction` LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `lab_image` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `lab_image` ORDER BY id desc  [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `inspection_scope` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `inspection_scope` WHERE ( content !='' ) ORDER BY save_time desc LIMIT 4   [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020806s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000244s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000297s ]
+
+[ 2019-04-09T16:35:35+08:00 ] 127.0.0.1 /Home/Information/news
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000143s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000255s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0089s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `news` WHERE ( type=0 ) ORDER BY id desc LIMIT 0,4   [ RunTime:0.0022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000127s ]
+NOTIC: [8] Undefined variable: type C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 107 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021376s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021438s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000212s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000230s ]
+
+[ 2019-04-09T16:35:37+08:00 ] 127.0.0.1 /index.php/Information/news/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000138s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0083s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0242s ]
+SQL: SELECT * FROM `news` WHERE ( type=0 ) ORDER BY id desc LIMIT 4,4   [ RunTime:0.0036s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `news` WHERE ( type = 0 ) LIMIT 1   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined variable: type C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 107 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+NOTIC: [2] Use of undefined constant i - assumed 'i' (this will throw an Error in a future version of PHP) C:\Coding\Php\Wampserver\www\jcweb\Application\Runtime\Cache\Home\77a814446ea1d9a4d011f19ccdbe5997.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020319s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020380s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000142s ]
+
+[ 2019-04-09T16:35:38+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000162s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0079s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000105s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012159s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000113s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000160s ]
+
+[ 2019-04-09T16:37:04+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012227s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012337s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000183s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2019-04-09T16:51:42+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000168s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000340s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0017s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022699s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022773s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000259s ]
+
+[ 2019-04-09T16:54:07+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000170s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000258s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0151s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0024s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015995s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000178s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000225s ]
+
+[ 2019-04-09T16:54:28+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000145s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000248s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014466s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000187s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000235s ]
+
+[ 2019-04-09T16:54:42+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000164s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0078s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016709s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000175s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000114s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000159s ]
+
+[ 2019-04-09T16:56:10+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000168s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0086s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015611s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000127s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000115s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000163s ]
+
+[ 2019-04-09T16:56:24+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000269s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0217s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0068s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0024s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015674s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000177s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000223s ]
+
+[ 2019-04-09T16:58:08+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000154s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000260s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000207s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000231s ]
+
+[ 2019-04-09T17:00:01+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000166s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0097s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000215s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000262s ]
+
+[ 2019-04-09T17:00:25+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0223s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0022s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000206s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000233s ]
+
+[ 2019-04-09T17:02:15+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000123s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000319s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0092s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000115s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000131s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000179s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000117s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000165s ]
+
+[ 2019-04-09T17:03:15+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000459s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0088s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0021s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014349s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014421s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000181s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000227s ]
+
+[ 2019-04-09T19:42:19+08:00 ] 127.0.0.1 /index.php/home/Information/newDetail.html?type=1&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000217s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000548s ]
+SQL: SHOW COLUMNS FROM `head_image` [ RunTime:0.0099s ]
+SQL: SELECT * FROM `head_image` WHERE ( type = 2 ) LIMIT 1   [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `footer` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `footer` LIMIT 1   [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `news` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `news` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000320s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000212s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000258s ]
+

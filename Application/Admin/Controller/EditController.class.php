@@ -1136,8 +1136,7 @@ class EditController extends Controller {
         return $cell;
     }
     //导入excel表格内容
-    public function uplExcel($filepath)
-    {
+    public function uplExcel($filepath){
         // 导出Exl
         import("Org.Util.PHPExcel");
         $excel = new \PHPExcel();

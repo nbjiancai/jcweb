@@ -1,4 +1,9 @@
 <include file="Common:head" title="前台导航栏"/>
+<style>
+    .new-detail img{
+        width: 50px !important;
+    }
+</style>
     <div class="picContainer">
         <img src="__PUBLIC__/picture/notice.jpg" alt="新闻中心">
         <a id="fix-title" href="">新闻中心</a>
@@ -37,8 +42,8 @@
                 <div class="row" id="right-content-details">
                     <div class="col-xs-12 col-md-12">
                         <h2>{$one.title}</h2>
-                        <div>
-                            <p>{$one.content}</p>
+                        <div class="new-detail">
+                            <p >{$one.content}</p>
                         </div>
                         <br />
                         <br />
