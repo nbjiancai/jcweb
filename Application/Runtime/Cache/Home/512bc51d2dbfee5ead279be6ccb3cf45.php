@@ -125,6 +125,7 @@
                         <h2><?php echo ($one["title"]); ?></h2>
                         <div class="new-detail">
                             <p ><?php echo ($one["content"]); ?></p>
+                            <p style="line-height: 16px;"><img style="vertical-align: middle; margin-right: 2px;" src="http://jiancai.com/Public/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif"/><a style="font-size:12px; color:#0066cc;" href="/Uploads/ueditor/file/20190409/5cac59a704366.pdf" title="50.pdf">50.pdf</a></p><p style="line-height: 16px;"><br/></p>
                         </div>
                         <br />
                         <br />

@@ -262,78 +262,93 @@
         </div>  
     </div>
 <?php } ?>
-<div id="page-wrapper">
-    <ol class="breadcrumb" id="bread-crumb"></ol>
-<script type="text/javascript">
-	var menu_active = "<?php echo ($menu_active); ?>";
-	var menu_secoud_active = "<?php echo ($menu_secoud_active); ?>";
-	var menu = $(window.parent.document).find("#navslide");
-	menu.find("li").each(function(){
-		var parent = $(this).data("parent");
-		var active = $(this).data("active");
-            if(parent==menu_active){
-                var parentObj = $(this).parent().parent();
-                
-                if(active==menu_secoud_active){
-                    var parentnav = parentObj.parent().find("dt").text();
-                    var curnav = $(this).text();
-                    var breadcrumbHtml = '<li class="glyphicon glyphicon-home">&nbsp;'+$.trim(parentnav)+'</li><li class="active">'+$.trim(curnav)+'</li>';
-                    $("#bread-crumb").html(breadcrumbHtml);
-                }
-            }
-        });
-</script>
-    <div id="page-inner" class="container">
-        <form class="form-horizontal" id="myform" action="" method="post">
-            <div class="form-group">
-                <label class="col-sm-1 control-label talign-center fz13"></label>
-                <div class="col-sm-11">
-                    <button type="submit" class="btn btn-success " onclick="doAdd()">保存</button>
-                    <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-1 control-label talign-center fz13">标题</label>
-                <div class="col-sm-11">
-                    <input type="text" name="title" class="col-sm-8" value="<?php echo ($one["title"]); ?>">
-                    <input type="hidden" name="type" value="<?php echo ($de); ?>"/>
-                    <input type="hidden" name="id" value="<?php echo ($one["id"]); ?>"/>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-1 control-label talign-center fz13">内容</label>
-                <div class="col-sm-11">
-                    <textarea id="content" name="content" ><?php echo ($one["content"]); ?></textarea>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </form>
-    </div>
+<div>
+    <style type="text/css">
+        div{text-align:center;}
+        thead{text-align:center;}
+        th{text-align:center;}
+
+    </style>
+    <a class="btn btn-success btn-xs" href="<?php echo U('/admin/report/addReport');?>"><i class="glyphicon glyphicon-plus"></i>新增</a><p/>
+    <table class="table table-bordered table-bordered table-hover">
+
+        <thead>
+        <th width="10%">id</th>
+        <th width="30%">受检单位</th>
+        <th width="30%">中心编号</th>
+        <th width="10%">状态</th>
+        <th >操作</th>
+        </thead>
+        <tbody>
+        <?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$one): $mod = ($i % 2 );++$i;?><tr>
+
+                <td ><?php echo ($one["id"]); ?></td>
+                <td ><?php echo ($one["unit"]); ?></td>
+                <td><?php echo ($one["code"]); ?></td>
+                <td>
+                    <?php if($one['status'] == 0): ?>关闭<?php endif; ?>
+                    <?php if($one['status'] == 1): ?>开启<?php endif; ?>
+                </td>
+                <td>
+                    <a class="btn btn-primary btn-xs" href="<?php echo U('/admin/report/addReport');?>?id=<?php echo ($one["id"]); ?>" ><i class="glyphicon glyphicon-cog"></i>修改内容</a>
+                    <a class="btn btn-danger btn-xs" href="javascript:void(0);" onclick="onDelete('<?php echo ($one["id"]); ?>')" ><i class="glyphicon glyphicon-trash"></i>删除</a>
+                </td>
+            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+        </tbody>
+    </table>
+    <div class=" pull-right"><nav aria-label="Page navigation" id="pagination"><?php echo ($pagination); ?></nav></div>
+
 </div>
-<script src="/Public/static/js/jquery.form.js"></script>
 <script type="text/javascript">
-    function doAdd(){
-        var options = {
-            url: "<?php echo U('/admin/edit/saveInfo');?>",
-            dataType: 'json',
-            beforeSubmit: function(){
-                return true;
-            },
-            success: function (data) {
-                if(data.msg=='succ'){
-                    var _options = {"text":"保存成功！","action":function(){window.location.reload();}};
+    $(function(){
+        var de = $("#de_choose").val();
+        $("li[name='de']").removeClass("active");
+        $("#de_"+de).addClass("active");
+    });
+    //设为首页左边展板
+    function doSpecial(id){
+        if(!id) return false;
+        $.ajax({
+            type:"post",
+            url:"<?php echo U('/admin/edit/doSpecial');?>",
+            data:{"id":id},
+            dataType:"json",
+            success:function(ret){
+                if(ret.msg=='succ'){
+                    var _options = {"text":"设置成功！","action":function(){window.location.reload();}};
                     doAlertDialog(_options);
                 }else{
-                    var _options = {"text":"保存失败！"};
+                    var _options = {"text":"设置失败！"};
                     if(data.msg) _options.text = data.msg;
                     doAlertDialog(_options);
                 }
             }
-        };
-        $("#myform").ajaxForm(options);
-        return false;
+        });
+    }
+    //删除
+    function onDelete(id){
+        if(!id) return false;
+        var _options = {"flag":"error","text":"您确定要删除吗！","buttons":{"ok":{"action":function(){doneDel(id);}},"cancel":{}}};
+        doConfirmDialog(_options);
+    }
+    function doneDel(id){
+        if(!id) return false;
+        $.ajax({
+            type:"post",
+            url:"<?php echo U('/admin/edit/doInfoDelete');?>",
+            data:{"id":id},
+            dataType:"json",
+            success:function(ret){
+                if(ret.msg=='succ'){
+                    var _options = {"text":"删除成功！","action":function(){window.location.reload();}};
+                    doAlertDialog(_options);
+                }else{
+                    var _options = {"text":"删除失败！"};
+                    if(data.msg) _options.text = data.msg;
+                    doAlertDialog(_options);
+                }
+            }
+        });
     }
 </script>
 	<footer>

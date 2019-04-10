@@ -284,6 +284,12 @@
         });
 </script>
     <div id="page-inner" class="container">
+
+        <style type="text/css">
+            div{text-align:center;}
+            th{text-align:center;}
+
+        </style>
         <ul class="nav nav-tabs">
             <li role="presentation" class="active" id="de_A" name="de"><a href="/admin/main/lunbo?de=A" >首页轮播图</a></li>
             <li role="presentation" id="de_B" name="de"><a href="/admin/main/lunbo?de=B">实验室图片</a></li>
@@ -297,17 +303,45 @@
                         <input type="hidden" name="thumb_url"/>
                         <input type="hidden" name="de" value="<?php echo ($de); ?>"/>
                         <?php if($de == B): ?>图片名称：<input type="text" name="title"><?php endif; ?>
-                        <input type="file" name="file" onchange="ajaxFileUpload()" id="addfile"/>
-                        <p class="help-block" id="attachment"></p>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label talign-center">&nbsp;</label>
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-success" onclick="onSave()">保 存</button>
-                        <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
-                        <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
+
+                        <table>
+                            <td><input type="file" name="file" onchange="ajaxFileUpload()" id="addfile" float/></td>
+                            <td><p class="help-block" id="attachment"></p></td>
+
+                            <style type="text/css">
+                                #addfile{
+                                    height:30px;
+                                    width:360px;
+                                    margin:20px auto;
+                                    border:1px solid #c8cccf;
+                                    color:#6a6f77;
+                                }
+                                #attachment{
+                                    height:30px;
+                                    border:1px solid #c8cccf;
+                                    color:#6a6f77;
+                                    width:750px;
+                                    margin:20px auto;
+                                }
+                            </style>
+
+                            <div class="clearfix"></div>
+
+                            <div class="form-horizontal">
+                                <label class="col-sm-2 control-label talign-center">&nbsp;</label>
+                                <div class="col-sm-10">
+                                    <td>
+                                        <button type="submit" class="btn btn-success" onclick="onSave()">保 存</button>
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-success" onclick="javascript:history.go(-1);">返 回</button>
+                                    </td>
+                                    <!--<a href="<?php echo U('/admin/contract/sampleEdit');?>?id=<?php echo ($centreno); ?>" class="btn btn-success">返 回</a>-->
+                                </div>
+
+                            </div>
+
+                        </table>
                     </div>
                 </div>
             </form>
@@ -315,7 +349,7 @@
         <div>
             <?php if($de == A): ?><table class="table table-bordered table-striped table-hover">
                     <thead>
-                    <th width="80%">轮播图片</th>
+                    <th width="60%">轮播图片</th>
                     <th>操作</th>
                     </thead>
                     <tbody>
@@ -333,7 +367,7 @@
             <?php if($de == B): ?><table class="table table-bordered table-striped table-hover">
                     <thead>
                     <th width="50%">实验室图片</th>
-                    <th width="30%">图片名称</th>
+                    <th width="40%"><style><图片名称/style></th>
                     <th>操作</th>
                     </thead>
                     <tbody>
